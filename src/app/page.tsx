@@ -10,29 +10,6 @@ import {
   Github,
 } from "lucide-react";
 
-const highlights = [
-  {
-    label: "Connections",
-    value: "500+",
-    detail: "global network across robotics, autonomy, and software",
-  },
-  {
-    label: "Profile views",
-    value: "31",
-    detail: "past 7 days",
-  },
-  {
-    label: "Post impressions",
-    value: "14",
-    detail: "past 7 days",
-  },
-  {
-    label: "Search appearances",
-    value: "35",
-    detail: "past 7 days",
-  },
-];
-
 const experience = [
   {
     role: "Senior Software Engineer",
