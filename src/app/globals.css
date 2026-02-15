@@ -99,6 +99,22 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-padding-top: calc(var(--top-bar-height) + 12px);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--top-bar-height) + 12px);
+}
+
+html {
+  scroll-padding-top: calc(var(--top-bar-height) + 12px);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--top-bar-height) + 12px);
+}
+
 html.cursor-enabled,
 html.cursor-enabled body {
   cursor: none;
@@ -1369,6 +1385,7 @@ a {
     --type-subhead: clamp(1.15rem, 4.6vw, 1.35rem);
     --type-body: 0.95rem;
     --type-small: 0.82rem;
+    --top-bar-height: 72px;
   }
 
   .top-bar {

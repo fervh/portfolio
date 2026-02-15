@@ -269,7 +269,7 @@ export default function HomeContent() {
 
   return (
     <>
-      <header className="hero scroll-reveal" data-delay="2">
+      <header id="about" className="hero scroll-reveal" data-delay="2">
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Portfolio</p>
@@ -323,7 +323,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="about" className="section-flow scroll-reveal" data-delay="4">
+      <section className="section-flow scroll-reveal" data-delay="4">
         <div className="section-header">
           <h2>Profile</h2>
           <span className="section-tag">01</span>
