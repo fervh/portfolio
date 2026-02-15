@@ -743,7 +743,7 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 26px;
-  background-image: linear-gradient(140deg, rgba(10, 18, 34, 0.32), rgba(241, 105, 60, 0.2)),
+  background-image: linear-gradient(140deg, rgba(10, 18, 34, 0.38), rgba(241, 105, 60, 0.12)),
     url("/images/portrait.jpeg");
   background-size: cover;
   background-position: center;
