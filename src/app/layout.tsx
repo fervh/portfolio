@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 import PageBackground from "@/components/PageBackground";
 import TopBar from "@/components/TopBar";
 import TopBarMask from "@/components/TopBarMask";
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <CustomCursor />
         <PageBackground />
         <TopBarMask />
         <TopBar />

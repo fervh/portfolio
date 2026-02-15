@@ -2,12 +2,13 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { Briefcase, GraduationCap, Mail, User } from "lucide-react";
+import { Briefcase, FolderKanban, Mail, User, Wrench } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About", Icon: User },
   { href: "#experience", label: "Experience", Icon: Briefcase },
-  { href: "#education", label: "Education", Icon: GraduationCap },
+  { href: "#projects", label: "Projects", Icon: FolderKanban },
+  { href: "#skills", label: "Skills", Icon: Wrench },
   { href: "#contact", label: "Contact", Icon: Mail },
 ];
 
@@ -21,7 +22,7 @@ export default function TopBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 860) {
+      if (window.innerWidth > 980) {
         setMenuOpen(false);
       }
     };
