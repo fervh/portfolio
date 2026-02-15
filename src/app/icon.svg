@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="FV">
-  <rect width="256" height="256" rx="48" fill="#3d5a4f" />
-  <path
-    d="M72 80h112v24H96v24h72v24H96v56H72V80zm112 0h24l-56 128h-26L120 80h26l22 56 16-56z"
-    fill="#f5f2ed"
-  />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="F">
+  <rect width="256" height="256" rx="48" fill="#ffffff" />
+  <path d="M88 56h96v24h-68v34h56v24h-56v62H88V56z" fill="#f1693c" />
 </svg>
