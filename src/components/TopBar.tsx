@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import { Briefcase, FolderKanban, Mail, User, Wrench } from "lucide-react";
+import { Briefcase, FolderKanban, Mail, Moon, Sun, User, Wrench } from "lucide-react";
 
 const navLinks = [
   { href: "#about", label: "About", Icon: User },
@@ -14,11 +14,49 @@ const navLinks = [
 
 export default function TopBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
   const isClient = useSyncExternalStore(
     () => () => undefined,
     () => true,
     () => false
   );
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const getSystemTheme = () => (media.matches ? "dark" : "light");
+
+    const applyTheme = (nextTheme: "light" | "dark") => {
+      root.setAttribute("data-theme", nextTheme);
+      setTheme(nextTheme);
+    };
+
+    const storedTheme = window.localStorage.getItem("theme");
+
+    if (storedTheme === "light" || storedTheme === "dark") {
+      applyTheme(storedTheme);
+    } else {
+      const initialTheme = (root.getAttribute("data-theme") as "light" | "dark" | null) ?? getSystemTheme();
+      applyTheme(initialTheme);
+    }
+
+    const handleSystemThemeChange = (event: MediaQueryListEvent) => {
+      if (!window.localStorage.getItem("theme")) {
+        applyTheme(event.matches ? "dark" : "light");
+      }
+    };
+
+    media.addEventListener("change", handleSystemThemeChange);
+    return () => media.removeEventListener("change", handleSystemThemeChange);
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    window.localStorage.setItem("theme", nextTheme);
+    setTheme(nextTheme);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,6 +100,20 @@ export default function TopBar() {
             {label}
           </a>
         ))}
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        >
+          {theme === "dark" ? (
+            <Sun className="icon" aria-hidden="true" />
+          ) : (
+            <Moon className="icon" aria-hidden="true" />
+          )}
+          <span>{theme === "dark" ? "Light" : "Dark"}</span>
+        </button>
       </nav>
       <div className="mobile-nav">
         <button
@@ -98,6 +150,21 @@ export default function TopBar() {
               role="menu"
               aria-hidden={!menuOpen}
             >
+              <button
+                type="button"
+                role="menuitem"
+                className="theme-toggle theme-toggle-mobile"
+                onClick={toggleTheme}
+                aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+                title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+              >
+                {theme === "dark" ? (
+                  <Sun className="icon" aria-hidden="true" />
+                ) : (
+                  <Moon className="icon" aria-hidden="true" />
+                )}
+                <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
+              </button>
               {navLinks.map(({ href, label, Icon }) => (
                 <a
                   key={href}
