@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import PageBackground from "@/components/PageBackground";
+import TopBar from "@/components/TopBar";
+import TopBarMask from "@/components/TopBarMask";
+import TopBarSpacer from "@/components/TopBarSpacer";
 
 export const metadata: Metadata = {
   title: "Fernando Vela Hidalgo | Portfolio",
@@ -16,7 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <PageBackground />
+        <TopBarMask />
+        <TopBar />
+        <TopBarSpacer>
+          <main className="page">{children}</main>
+        </TopBarSpacer>
+      </body>
     </html>
   );
 }
