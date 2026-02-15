@@ -1,6 +1,7 @@
 {
   "name": "fernando-portfolio",
   "version": "0.1.0",
+  "license": "UNLICENSED",
   "homepage": "https://fervh.github.io/portfolio",
   "private": true,
   "scripts": {

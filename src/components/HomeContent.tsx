@@ -270,6 +270,10 @@ export default function HomeContent() {
           </div>
         </div>
       </section>
+
+      <footer className="footer">
+        <p className="footer-text">© 2026 Fernando Vela Hidalgo. All rights reserved.</p>
+      </footer>
     </>
   );
 }

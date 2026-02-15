@@ -518,8 +518,52 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   gap: 16px;
   margin-bottom: 22px;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding-left: 26px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--divider);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px 18px;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.35);
+}
+
+.timeline-item p {
+  margin-bottom: 0;
 }
 
 .section-tag {
@@ -598,6 +642,7 @@ a {
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
+  min-height: 44px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
   opacity: 0.92;
@@ -616,6 +661,21 @@ a {
 .contact-links a:focus-visible {
   opacity: 1;
   transform: translateX(var(--motion-translate-sm));
+}
+
+.footer {
+  padding: 28px 0 12px;
+  border-top: 1px solid var(--divider);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: var(--type-small);
+  color: var(--muted);
+  letter-spacing: 0.02em;
 }
 
 @keyframes drift {
@@ -701,6 +761,13 @@ a {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --type-hero: clamp(2.6rem, 8vw, 3.2rem);
+    --type-section: clamp(1.9rem, 5.5vw, 2.4rem);
+    --type-subhead: clamp(1.25rem, 3.8vw, 1.5rem);
+    --type-body: 0.98rem;
+  }
+
   .page {
     padding: 40px 20px 100px;
   }
@@ -725,6 +792,40 @@ a {
   .section-heading,
   .section-header {
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-flow {
+    padding: 28px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links a {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -16px;
+  }
+
+  .footer {
+    padding: 24px 0 8px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -751,6 +852,45 @@ a {
 }
 
 @media (max-width: 520px) {
+  :root {
+    --type-hero: clamp(2.2rem, 9vw, 2.7rem);
+    --type-section: clamp(1.7rem, 7vw, 2.1rem);
+    --type-subhead: clamp(1.15rem, 4.6vw, 1.35rem);
+    --type-body: 0.95rem;
+    --type-small: 0.82rem;
+  }
+
+  .top-bar {
+    min-height: 72px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
+
+  .brand-mark {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    gap: 16px;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .timeline {
+    padding-left: 16px;
+  }
+
+  .timeline-item {
+    padding: 14px 16px 16px;
+  }
+
+  .timeline-item::before {
+    left: -14px;
+    top: 16px;
+  }
+
   .mobile-nav {
     width: 100%;
     align-items: stretch;
