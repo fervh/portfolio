@@ -492,9 +492,9 @@ export default function HomeContent() {
             <p className="muted">Available for international opportunities in advanced robotics.</p>
           </div>
           <div className="contact-links">
-            <a href="mailto:fernandovelahidalgo@gmail.com">
+            <a href="mailto:contact@velahidalgo.com">
               <Mail className="icon" aria-hidden="true" />
-              fernandovelahidalgo@gmail.com
+              contact@velahidalgo.com
             </a>
             <a
               href="https://www.linkedin.com/in/fernandovelahidalgo/"
