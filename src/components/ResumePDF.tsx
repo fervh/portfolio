@@ -142,144 +142,152 @@ export interface CVData {
   languages: string;
 }
 
-// Styles
+// Styles - Impact format: maximum width utilization, tight margins
 const styles = StyleSheet.create({
   page: {
     fontFamily: 'Helvetica',
-    fontSize: 10,
-    paddingTop: 36,
-    paddingBottom: 36,
-    paddingHorizontal: 47,
+    fontSize: 9.5,
+    paddingTop: 24,
+    paddingBottom: 24,
+    paddingHorizontal: 28,
     backgroundColor: '#ffffff',
     color: '#1a1a1a',
-    lineHeight: 1.5,
+    lineHeight: 1.4,
   },
   
-  // Header Section
+  // Header Section - Impact style
   header: {
     flexDirection: 'row',
-    gap: 16,
-    marginBottom: 16,
-    paddingBottom: 16,
-    borderBottom: '3pt solid #1e3a8a',
-    alignItems: 'center',
+    gap: 12,
+    marginBottom: 12,
+    paddingBottom: 10,
+    borderBottom: '2.5pt solid #1e3a8a',
+    alignItems: 'flex-start',
   },
   portrait: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+    width: 70,
+    height: 70,
+    borderRadius: 35,
     objectFit: 'cover',
   },
   headerInfo: {
     flex: 1,
   },
   name: {
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: 700,
-    marginBottom: 18,
+    marginBottom: 4,
     color: '#1e3a8a',
+    letterSpacing: -0.3,
   },
   role: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 600,
     color: '#1e3a8a',
-    marginBottom: 8,
+    marginBottom: 5,
   },
   headline: {
-    fontSize: 8.5,
-    color: '#666',
+    fontSize: 8,
+    color: '#555',
     lineHeight: 1.3,
+    textAlign: 'justify',
   },
   
   // Contact Bar
   contactBar: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
-    marginBottom: 18,
-    paddingBottom: 12,
-    borderBottom: '1pt solid #e0e0e0',
+    gap: 6,
+    marginBottom: 12,
+    paddingBottom: 8,
+    borderBottom: '0.75pt solid #ddd',
     alignItems: 'center',
   },
   contactItem: {
-    fontSize: 8,
-    color: '#666',
+    fontSize: 7.5,
+    color: '#555',
     textDecoration: 'none',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 3,
+    gap: 2.5,
   },
   contactLink: {
-    fontSize: 8,
+    fontSize: 7.5,
     color: '#1e3a8a',
     textDecoration: 'none',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 3,
+    gap: 2.5,
   },
   contactDivider: {
-    color: '#ddd',
-    fontSize: 8,
+    color: '#ccc',
+    fontSize: 7.5,
   },
   
   // Section
   section: {
-    marginBottom: 16,
+    marginBottom: 11,
   },
   sectionHeader: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 700,
     color: '#1e3a8a',
-    marginBottom: 8,
-    paddingBottom: 4,
-    borderBottom: '2pt solid #1e3a8a',
+    marginBottom: 6,
+    paddingBottom: 3,
+    borderBottom: '1.5pt solid #1e3a8a',
+    letterSpacing: 0.3,
   },
   
   // Summary
   summaryText: {
-    fontSize: 10,
-    lineHeight: 1.5,
+    fontSize: 9.5,
+    lineHeight: 1.4,
     color: '#1a1a1a',
+    textAlign: 'justify',
   },
   
   // Bullet Lists
   bulletList: {
-    gap: 5,
+    gap: 3,
   },
   bulletItem: {
     flexDirection: 'row',
-    gap: 8,
+    gap: 5,
+    alignItems: 'flex-start',
   },
   bullet: {
-    fontSize: 10,
+    fontSize: 8,
     color: '#1e3a8a',
-    marginTop: 1,
+    marginTop: 0.5,
+    minWidth: 8,
   },
   bulletText: {
     flex: 1,
-    fontSize: 10,
-    lineHeight: 1.4,
+    fontSize: 8.5,
+    lineHeight: 1.3,
     color: '#1a1a1a',
+    textAlign: 'justify',
+    letterSpacing: -0.05,
   },
   
   // Two Column Layout
   twoColumn: {
     flexDirection: 'row',
-    gap: 20,
-    marginBottom: 16,
+    gap: 16,
+    marginBottom: 11,
   },
   column: {
     flex: 1,
   },
   
-  // Experience Items
+  // Experience Items - Impact style with tight justified text
   experienceItem: {
-    marginBottom: 12,
-    paddingBottom: 12,
-    borderBottom: '0.5pt solid #e0e0e0',
+    marginBottom: 8,
+    paddingBottom: 8,
+    borderBottom: '0.5pt solid #e5e5e5',
   },
   experienceLastItem: {
-    marginBottom: 12,
+    marginBottom: 8,
     paddingBottom: 0,
     borderBottom: 'none',
   },
@@ -287,68 +295,85 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    marginBottom: 3,
+    marginBottom: 1.5,
   },
   experienceRole: {
-    fontSize: 12,
+    fontSize: 10.5,
     fontWeight: 700,
     color: '#1a1a1a',
     flex: 1,
+    letterSpacing: -0.1,
   },
   experienceMeta: {
-    fontSize: 8,
+    fontSize: 7,
     color: '#666',
     textAlign: 'right',
+    letterSpacing: -0.05,
   },
   experienceCompany: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: 600,
     color: '#444',
-    marginBottom: 6,
+    marginBottom: 4,
+    letterSpacing: -0.05,
   },
   experienceBullets: {
-    gap: 4,
-    marginBottom: 6,
+    gap: 2.5,
+    marginBottom: 4,
   },
   experienceBullet: {
     flexDirection: 'row',
-    gap: 6,
+    gap: 3.5,
+    alignItems: 'flex-start',
+  },
+  experienceBulletMark: {
+    fontSize: 7,
+    color: '#1e3a8a',
+    marginTop: 0.5,
+    minWidth: 6,
+    flexShrink: 0,
   },
   experienceBulletText: {
     flex: 1,
-    fontSize: 9,
-    lineHeight: 1.4,
+    fontSize: 8,
+    lineHeight: 1.28,
     color: '#1a1a1a',
+    textAlign: 'justify',
+    letterSpacing: -0.08,
   },
   outcomeLabel: {
-    fontSize: 9,
-    fontWeight: 600,
-    color: '#444',
+    fontSize: 8,
+    fontWeight: 700,
+    color: '#1e3a8a',
   },
   outcomeText: {
-    fontSize: 9,
-    color: '#666',
+    fontSize: 8,
+    color: '#1a1a1a',
     fontWeight: 400,
+    textAlign: 'justify',
+    lineHeight: 1.28,
+    letterSpacing: -0.08,
   },
   
   // Projects
   projectItem: {
-    marginBottom: 10,
+    marginBottom: 8,
   },
   projectName: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 700,
     color: '#1a1a1a',
-    marginBottom: 3,
+    marginBottom: 2.5,
   },
   projectDetails: {
-    fontSize: 9,
-    lineHeight: 1.4,
+    fontSize: 8.5,
+    lineHeight: 1.35,
     color: '#1a1a1a',
-    marginBottom: 3,
+    marginBottom: 2.5,
+    textAlign: 'justify',
   },
   projectStack: {
-    fontSize: 8,
+    fontSize: 7.5,
     color: '#666',
   },
   stackLabel: {
@@ -358,76 +383,77 @@ const styles = StyleSheet.create({
   
   // Education
   educationItem: {
-    marginBottom: 10,
+    marginBottom: 8,
   },
   educationDegree: {
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: 700,
     color: '#1a1a1a',
     marginBottom: 2,
   },
   educationMeta: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: "#444444",
-    marginBottom: 4,
+    marginBottom: 3,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
+    gap: 5,
   },
   educationLogo: {
-    height: 15,
+    height: 13,
     width: 'auto',
-    marginTop: -10,
+    marginTop: -8,
   },
   educationSchoolRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 6,
-    marginBottom: 4,
+    gap: 5,
+    marginBottom: 3,
   },
   educationDetails: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: '#1a1a1a',
-    lineHeight: 1.4,
+    lineHeight: 1.35,
+    textAlign: 'justify',
   },
   
   // Skills
   skillItem: {
-    marginBottom: 8,
+    marginBottom: 7,
   },
   skillTitle: {
-    fontSize: 10,
+    fontSize: 9.5,
     fontWeight: 700,
     color: '#1a1a1a',
     marginBottom: 2,
   },
   skillValues: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: '#1a1a1a',
-    lineHeight: 1.4,
+    lineHeight: 1.35,
   },
   
   // Certifications
   certificationItem: {
-    marginBottom: 8,
+    marginBottom: 7,
   },
   certificationTitle: {
-    fontSize: 10,
+    fontSize: 9.5,
     fontWeight: 700,
     color: '#1a1a1a',
     marginBottom: 2,
   },
   certificationList: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: '#1a1a1a',
-    lineHeight: 1.4,
+    lineHeight: 1.35,
   },
   
   // Languages
   languagesText: {
-    fontSize: 9,
+    fontSize: 8.5,
     color: '#1a1a1a',
-    marginBottom: 10,
+    marginBottom: 8,
   },
 });
 
@@ -441,7 +467,7 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
       subject="Curriculum Vitae"
       keywords="robotics, autonomy, perception, embedded systems, UAV, software engineering"
     >
-      {/* Page 1: Header, Summary, Core Highlights, Leadership & Autonomy */}
+      {/* Page 1: Header, Summary, Metrics, Core Skills */}
       <Page size="A4" style={styles.page}>
         {/* Header with Portrait */}
         <View style={styles.header} wrap={false}>
@@ -491,15 +517,15 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
         </View>
 
-        {/* Executive Summary */}
+        {/* Profile Summary */}
         <View style={styles.section} wrap={false}>
-          <Text style={styles.sectionHeader}>Executive Summary</Text>
+          <Text style={styles.sectionHeader}>Profile</Text>
           <Text style={styles.summaryText}>{cvData.summary}</Text>
         </View>
 
-        {/* Core Impact Highlights */}
+        {/* Metrics */}
         <View style={styles.section} wrap={false}>
-          <Text style={styles.sectionHeader}>Core Impact Highlights</Text>
+          <Text style={styles.sectionHeader}>Metrics</Text>
           <View style={styles.bulletList}>
             {cvData.impactHighlights.map((item, index) => (
               <View key={index} style={styles.bulletItem}>
@@ -510,10 +536,10 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
         </View>
 
-        {/* Two Column: Leadership & Autonomy Expertise */}
+        {/* Two Column: Leadership & Core Technical Skills */}
         <View style={styles.twoColumn} wrap={false}>
           <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Technical Leadership</Text>
+            <Text style={styles.sectionHeader}>Leadership</Text>
             <View style={styles.bulletList}>
               {cvData.leadershipAreas.map((item, index) => (
                 <View key={index} style={styles.bulletItem}>
@@ -524,7 +550,7 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
             </View>
           </View>
           <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Autonomy & Perception</Text>
+            <Text style={styles.sectionHeader}>Core Technical</Text>
             <View style={styles.bulletList}>
               {cvData.autonomyExpertise.map((item, index) => (
                 <View key={index} style={styles.bulletItem}>
@@ -536,9 +562,9 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
         </View>
 
-        {/* Systems, Validation, and Reliability */}
+        {/* Systems & Architecture */}
         <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Systems, Validation, and Reliability</Text>
+          <Text style={styles.sectionHeader}>Systems & Architecture</Text>
           <View style={styles.bulletList}>
             {cvData.systemsReliability.map((item, index) => (
               <View key={index} style={styles.bulletItem}>
@@ -570,7 +596,7 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
               <View style={styles.experienceBullets}>
                 {exp.bullets.map((bullet, bIndex) => (
                   <View key={bIndex} style={styles.experienceBullet}>
-                    <Text style={styles.bullet}>•</Text>
+                    <Text style={styles.experienceBulletMark}>•</Text>
                     <Text style={styles.experienceBulletText}>{bullet}</Text>
                   </View>
                 ))}
@@ -583,9 +609,9 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           ))}
         </View>
 
-        {/* Selected Projects */}
+        {/* Self-Development Projects */}
         <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Selected Projects</Text>
+          <Text style={styles.sectionHeader}>Self-Development Projects</Text>
           {cvData.projects.map((project, index) => (
             <View key={index} style={styles.projectItem} wrap={false}>
               <Text style={styles.projectName}>{project.name}</Text>
@@ -599,9 +625,9 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
         </View>
       </Page>
 
-      {/* Page 3: Education, Skills, Certifications */}
+      {/* Page 3: Education, Technical Skills, Achievements, Languages, Certifications */}
       <Page size="A4" style={styles.page}>
-        {/* Two Column: Education & Skills */}
+        {/* Two Column: Education & Technical Skills */}
         <View style={styles.twoColumn}>
           <View style={styles.column}>
             <Text style={styles.sectionHeader}>Education</Text>
@@ -624,7 +650,7 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
 
           <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Advanced Skill Set</Text>
+            <Text style={styles.sectionHeader}>Technical Skills</Text>
             {cvData.skillGroups.map((group, index) => (
               <View key={index} style={styles.skillItem} wrap={false}>
                 <Text style={styles.skillTitle}>{group.title}</Text>
@@ -634,10 +660,15 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
         </View>
 
-        {/* Languages and Certifications */}
+        {/* Languages */}
         <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Languages and Certifications</Text>
+          <Text style={styles.sectionHeader}>Languages</Text>
           <Text style={styles.languagesText}>{cvData.languages}</Text>
+        </View>
+
+        {/* Achievements and Certifications */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>Achievements & Certifications</Text>
           {cvData.certificationGroups.map((group, index) => (
             <View key={index} style={styles.certificationItem} wrap={false}>
               <Text style={styles.certificationTitle}>{group.title}</Text>

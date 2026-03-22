@@ -111,11 +111,11 @@
 }
 
 html {
-  scroll-padding-top: calc(var(--top-bar-height) + 10px);
+  scroll-padding-top: var(--top-bar-height);
 }
 
 [id] {
-  scroll-margin-top: calc(var(--top-bar-height) + 10px);
+  scroll-margin-top: var(--top-bar-height);
 }
 
 body {
@@ -255,7 +255,7 @@ main {
 }
 
 .page {
-  width: min(1120px, 100% - 48px);
+  width: min(1280px, 100% - 48px);
   margin: 0 auto;
   padding: clamp(30px, 4vw, 58px) clamp(18px, 4vw, 40px) 120px;
   display: flex;
@@ -323,6 +323,13 @@ h3 {
 p {
   margin: 0 0 12px;
   color: var(--muted);
+}
+
+strong {
+  font-weight: 400;
+  background: linear-gradient(transparent 70%, color-mix(in srgb, var(--accent) 28%, transparent) 0);
+  padding: 0 0.08em;
+  color: var(--text);
 }
 
 .muted {
@@ -710,7 +717,8 @@ button:focus-visible {
 
 .lead {
   font-size: clamp(1.06rem, 1.7vw, 1.2rem);
-  max-width: 66ch;
+  max-width: none;
+  text-align: justify;
 }
 
 .hero-actions {
@@ -796,6 +804,8 @@ button:focus-visible {
   display: grid;
   gap: 16px;
   position: relative;
+  align-items: start;
+  justify-items: center;
 }
 
 .soft-glow-orb {
@@ -816,6 +826,7 @@ button:focus-visible {
 .hero-image-frame {
   position: relative;
   width: min(100%, 360px);
+  justify-self: center;
 }
 
 .hero-mini-linkedin {
@@ -858,6 +869,8 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .hero-kpi {
@@ -865,10 +878,11 @@ button:focus-visible {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 12px;
+  text-align: center;
 }
 
 .hero-meta-label {
-  margin: 0 0 8px;
+  margin: 8px 0 0;
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -879,8 +893,13 @@ button:focus-visible {
 .hero-meta-value {
   margin: 0;
   color: var(--text);
-  font-size: 1.26rem;
+  font-size: 1.4rem;
   font-weight: 700;
+}
+
+.hero-meta-value-regions {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .marquee {
@@ -910,6 +929,11 @@ button:focus-visible {
 .section-flow {
   padding: 44px 0;
   border-top: 1px solid var(--line);
+}
+
+.section-flow > p {
+  text-align: justify;
+  max-width: none;
 }
 
 .section-header {
@@ -952,7 +976,8 @@ button:focus-visible {
 .about-lead {
   color: var(--text);
   font-size: clamp(1.08rem, 2.1vw, 1.34rem);
-  max-width: 66ch;
+  max-width: none;
+  text-align: justify;
 }
 
 .timeline {
@@ -998,8 +1023,14 @@ button:focus-visible {
   color: var(--muted);
 }
 
+.timeline-points li {
+  text-align: justify;
+  line-height: 1.5;
+}
+
 .timeline-item p {
-  max-width: 66ch;
+  max-width: none;
+  text-align: justify;
 }
 
 .education-school-row {
@@ -1336,7 +1367,8 @@ button:focus-visible {
 
 .footer {
   border-top: 1px solid var(--line);
-  padding: 28px 0 10px;
+  padding: 28px 0 calc(100vh - 600px);
+  min-height: 200px;
 }
 
 .footer-text {

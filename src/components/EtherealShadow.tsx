@@ -21,6 +21,7 @@ interface EtherealShadowProps {
     noise?: NoiseConfig;
     style?: CSSProperties;
     className?: string;
+    id?: string;
 }
 
 function mapRange(
@@ -37,22 +38,17 @@ function mapRange(
     return toLow + percentage * (toHigh - toLow);
 }
 
-const useInstanceId = (): string => {
-    const id = useId();
-    const cleanId = id.replace(/:/g, "");
-    const instanceId = `shadowoverlay-${cleanId}`;
-    return instanceId;
-};
-
 export function EtherealShadow({
     sizing = 'fill',
     color = 'rgba(42, 156, 117, 0.3)',
     animation,
     noise,
     style,
-    className
+    className,
+    id: providedId
 }: EtherealShadowProps) {
-    const id = useInstanceId();
+    const generatedId = useId();
+    const id = providedId || `shadowoverlay-${generatedId.replace(/:/g, "")}`;
     const animationEnabled = animation && animation.scale > 0;
     const turbulenceRef = useRef<SVGFETurbulenceElement>(null);
 
@@ -151,9 +147,9 @@ export function EtherealShadow({
                         backgroundImage: `url('/images/noise-texture.png')`,
                         backgroundSize: noise.scale * 200,
                         backgroundRepeat: "repeat",
-                        opacity: noise.opacity / 2,
+                        opacity: noise.opacity / 5,
                         mixBlendMode: "overlay",
-                        filter: "invert(0.2) brightness(1)"
+                        filter: "invert(0.05) brightness(1.3)"
                     }}
                 />
             )}

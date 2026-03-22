@@ -47,9 +47,9 @@ import SectionAccentLine from "@/components/SectionAccentLine";
 import SectionHeadingHighlight from "@/components/SectionHeadingHighlight";
 
 const metrics = [
-  { label: "Years building robotics systems", value: "5+" },
-  { label: "Autonomy and perception programs", value: "20+" },
-  { label: "Regions worked", value: "ES / DE" },
+  { label: "Años de experiencia", value: "5+" },
+  { label: "Programas de autonomía", value: "20+" },
+  { label: "Regions worked", value: "Spain · Germany" },
 ];
 
 const coreSkillCategories = [
@@ -105,18 +105,12 @@ const experience = [
     summary:
       "Design, develop, and optimize flight control, perception, and embedded software for long-range UAVs, enabling safe and scalable BVLOS operations across Europe.",
     highlights: [
-      "Architect, develop, and maintain the full UAV software stack, spanning low-level firmware, middleware, and high-level embedded applications on STM32 and ARM-based systems.",
-      "Design and implement flight control systems for fixed-wing and VTOL platforms, focusing on safety-critical performance, robustness, and fault tolerance.",
-      "Develop and integrate perception pipelines using LiDAR, cameras, and onboard sensors for real-time environmental awareness and autonomous decision-making.",
-      "Implement real-time data processing and sensor fusion under RTOS environments (FreeRTOS, NuttX), ensuring deterministic and low-latency behavior.",
-      "Work extensively with embedded computing platforms, optimizing performance across constrained hardware and heterogeneous architectures.",
-      "Integrate, validate, and debug hardware-software interfaces (USB, SPI, I2C, CAN, SDIO), ensuring reliable communication across avionics and sensor subsystems.",
-      "Perform system-level debugging and root-cause analysis, resolving complex issues across firmware, hardware, and distributed components.",
-      "Contribute to and extend open-source autopilot frameworks (PX4, ArduPilot), improving modularity, performance, and system reliability.",
-      "Define and document system and software architectures, enabling scalability, maintainability, and clean interfaces across subsystems.",
-      "Develop internal tooling, simulation environments, and automated testing frameworks for validation and continuous integration of UAV systems.",
-      "Collaborate with cross-functional teams (hardware, perception, systems, operations) to align software with mission requirements and improve overall performance.",
-      "Drive continuous improvement in software quality, reliability, and engineering processes within safety-critical environments.",
+      <>Architect, develop, and maintain the full <strong>UAV software stack</strong>, spanning low-level firmware, middleware, and high-level embedded applications on STM32 and ARM-based systems. Work extensively with embedded computing platforms, optimizing performance across constrained hardware and heterogeneous architectures.</>,
+      <>Design and implement <strong>flight control systems</strong> for fixed-wing and VTOL platforms, focusing on safety-critical performance, robustness, and fault tolerance. Contribute to and extend open-source autopilot frameworks (<strong>PX4, ArduPilot</strong>), improving modularity, performance, and system reliability.</>,
+      <>Develop and integrate <strong>perception pipelines</strong> using LiDAR, cameras, and onboard sensors for real-time environmental awareness and autonomous decision-making. Implement real-time data processing and sensor fusion under <strong>RTOS</strong> environments (FreeRTOS, NuttX), ensuring deterministic and low-latency behavior.</>,
+      <>Integrate, validate, and debug hardware-software interfaces (USB, SPI, I2C, CAN, SDIO), ensuring reliable communication across avionics and sensor subsystems. Perform system-level debugging and root-cause analysis, resolving complex issues across firmware, hardware, and distributed components.</>,
+      <>Define and document system and software architectures, enabling scalability, maintainability, and clean interfaces across subsystems. Develop internal tooling, simulation environments, and automated testing frameworks for validation and continuous integration of UAV systems.</>,
+      <>Collaborate with cross-functional teams (hardware, perception, systems, operations) to align software with mission requirements and improve overall performance. Drive continuous improvement in software quality, reliability, and engineering processes within safety-critical environments.</>,
     ],
     impact: "Enhanced autonomous flight capabilities through tight integration of perception, control, and embedded systems. Increased system reliability and reduced failure rates via structured debugging and validation methodologies. Contributed to scalable UAV platforms ready for long-range autonomous operations in real-world environments.",
   },
@@ -128,15 +122,11 @@ const experience = [
     summary:
       "Design and development of perception systems, sensor architectures, and AI-driven solutions for autonomous and connected vehicles.",
     highlights: [
-      "Designed and implemented perception systems using computer vision and machine learning for environment detection and scene understanding.",
-      "Developed mapping and localization algorithms for intelligent vehicle navigation.",
-      "Contributed to the architecture and design of autonomous systems, including sensor layouts and real-time data processing pipelines.",
-      "Performed integration, setup, calibration, and validation of sensor systems (LiDAR, cameras, IMU, GNSS) in real-world environments.",
-      "Defined data structures and pipelines for efficient acquisition and processing of multimodal sensor data.",
-      "Built and validated AI models for real-time perception in dynamic scenarios.",
-      "Designed algorithms for data verification, validation, and security, ensuring robustness in safety-critical systems.",
-      "Developed proof-of-concept solutions and use cases for connected and autonomous vehicle (CAV) environments.",
-      "Contributed to hybrid mobility systems, integrating connected and automated vehicles in mixed environments.",
+      <>Designed and implemented <strong>perception systems</strong> using computer vision and machine learning for environment detection and scene understanding. Built and validated AI models for real-time perception in dynamic scenarios.</>,
+      <>Developed <strong>mapping and localization</strong> algorithms for intelligent vehicle navigation. Contributed to the architecture and design of autonomous systems, including sensor layouts and real-time data processing pipelines.</>,
+      <>Performed integration, setup, calibration, and validation of <strong>sensor systems</strong> (LiDAR, cameras, IMU, GNSS) in real-world environments. Defined data structures and pipelines for efficient acquisition and processing of multimodal sensor data.</>,
+      <>Designed algorithms for data verification, validation, and security, ensuring robustness in safety-critical systems. Developed proof-of-concept solutions and use cases for <strong>connected and autonomous vehicle</strong> (CAV) environments.</>,
+      <>Contributed to hybrid mobility systems, integrating connected and automated vehicles in mixed environments.</>,
     ],
     impact: "Improved perception accuracy and robustness through optimized sensor integration and system design. Enabled scalable architectures for real-time autonomous driving systems. Bridged research and engineering by delivering deployable, validated solutions.",
   },
@@ -148,13 +138,25 @@ const experience = [
     summary:
       "Supported the design and delivery of technical and economic proposals for large-scale public-sector projects across smart infrastructure domains.",
     highlights: [
-      "Designed end-to-end technical solutions for public tenders in Smart Cities, Smart Energy, Smart Buildings, and Transport Systems.",
-      "Structured and coordinated bid strategies, ensuring timely and high-quality proposal submissions.",
-      "Integrated advanced technologies into proposals, including Intelligent Transport Systems (ITS), Computer Vision and AI-based video analytics, IoT platforms and data-driven services, and Cloud ecosystems (Azure, AWS, GCP).",
-      "Positioned digitalization technologies including automation, robotics, digital twins, and augmented reality in competitive public tenders.",
-      "Collaborated with multidisciplinary teams and partners to align technical capabilities with client requirements.",
+      <>Designed end-to-end technical solutions for public tenders in <strong>Smart Cities, Smart Energy, Smart Buildings, and Transport Systems</strong>. Structured and coordinated bid strategies, ensuring timely and high-quality proposal submissions.</>,
+      <>Integrated advanced technologies into proposals, including <strong>Intelligent Transport Systems</strong> (ITS), Computer Vision and AI-based video analytics, <strong>IoT platforms</strong> and data-driven services, and Cloud ecosystems (Azure, AWS, GCP). Positioned digitalization technologies including automation, robotics, digital twins, and augmented reality in competitive public tenders.</>,
+      <>Collaborated with multidisciplinary teams and partners to align technical capabilities with client requirements.</>,
     ],
     impact: "Strengthened the technological positioning of proposals in competitive public tenders and contributed to delivering innovation-driven, high-value infrastructure solutions.",
+  },
+  {
+    role: "Robotics, Programming and 3D Design Instructor",
+    company: "The Creative Minds Education",
+    dates: "Dec 2020 - Jul 2022",
+    location: "Madrid, Spain",
+    summary:
+      "Taught robotics, programming, and 3D design to students, fostering technical skills and creative problem-solving.",
+    highlights: [
+      <>Delivered hands-on <strong>robotics and programming courses</strong>, covering topics from basic electronics to autonomous systems. Developed curriculum materials and practical exercises aligned with student learning objectives.</>,
+      <>Guided students through the design, prototyping, and fabrication process using <strong>CAD tools and 3D printing</strong> technologies. Emphasized iterative design thinking and real-world engineering workflows.</>,
+      <>Mentored students in project-based learning environments, supporting technical development and problem-solving skills.</>,
+    ],
+    impact: "Enabled students to develop foundational skills in robotics and digital fabrication, building confidence in STEM disciplines through applied, hands-on learning experiences.",
   },
 ];
 
@@ -277,6 +279,8 @@ const addedStrengths = [
   "System architecture from prototype to production",
   "Clear technical documentation and stakeholder communication",
   "Experiment design, validation, and iterative optimization",
+  "Cross-functional collaboration and knowledge transfer",
+  "Adaptability to dynamic project requirements and constraints",
 ];
 
 const achievements = [
@@ -371,6 +375,7 @@ export default function HomeContent() {
   return (
     <>
       <EtherealShadow
+        id="hero-shadow"
         color="rgba(42, 156, 117, 0.25)"
         animation={{ scale: 100, speed: 72 }}
         noise={{ opacity: 0.8, scale: 1.2 }}
@@ -386,7 +391,7 @@ export default function HomeContent() {
             </p>
             <div className="hero-actions">
               <a href="#contact" className="cta-button">
-                Hire me for autonomy systems
+                Contact me
                 <ArrowRight className="icon" aria-hidden="true" />
               </a>
               <Link href="/cv" className="cta-button is-ghost">
@@ -416,10 +421,10 @@ export default function HomeContent() {
               <div className="hero-image" role="img" aria-label="Autonomous robotics environment" />
             </div>
             <div className="hero-meta">
-              {metrics.map((metric) => (
+              {metrics.map((metric, index) => (
                 <article key={metric.label} className="hero-kpi">
+                  <p className={`hero-meta-value ${index === 2 ? 'hero-meta-value-regions' : ''}`}>{metric.value}</p>
                   <p className="hero-meta-label">{metric.label}</p>
-                  <p className="hero-meta-value">{metric.value}</p>
                 </article>
               ))}
             </div>
@@ -447,13 +452,20 @@ export default function HomeContent() {
         </div>
         <SectionAccentLine />
         <p className="about-lead">
-          Robotics engineer specialized in autonomy stack integration and lead-level
-          technical ownership for systems that
-          must perform outside the lab.
+          Robotics engineer specialized in <strong>autonomy stack integration</strong> and lead-level
+          technical ownership for production-grade autonomous systems.
         </p>
         <p>
-          I focus on LiDAR/camera perception pipelines, low-level communications,
-          and real-time control loops that turn prototypes into production-ready systems.
+          My work spans embedded systems development (STM32, ARM, FreeRTOS/NuttX), 
+          <strong>flight control software</strong> (PX4, ArduPilot), and <strong>perception pipelines</strong> integrating 
+          LiDAR, cameras, and multi-sensor fusion. I architect and implement real-time software stacks for 
+          autonomous UAVs and intelligent vehicles, bridging low-level firmware with high-level autonomy behaviors.
+        </p>
+        <p>
+          I focus on production-ready reliability: system-level debugging, hardware-software integration, 
+          validation frameworks, and <strong>safety-critical design</strong>. My approach combines research rigor with 
+          engineering pragmatism, delivering deployable solutions for real-world autonomous operations 
+          across Europe.
         </p>
       </section>
 
@@ -474,8 +486,8 @@ export default function HomeContent() {
               </div>
               <p>{item.summary}</p>
               <ul className="timeline-points">
-                {item.highlights.map((point) => (
-                  <li key={point}>{point}</li>
+                {item.highlights.map((point, index) => (
+                  <li key={index}>{point}</li>
                 ))}
               </ul>
               {item.impact && (
@@ -490,7 +502,7 @@ export default function HomeContent() {
 
       <section id="projects" className="section-flow scroll-reveal" data-delay="6">
         <div className="section-header">
-          <SectionHeadingHighlight title="Selected Projects" highlight="Projects" />
+          <SectionHeadingHighlight title="Self-Development Projects" highlight="Projects" />
           <span className="section-tag">03</span>
         </div>
         <SectionAccentLine />
