@@ -18,6 +18,8 @@ import {
 } from "react-icons/fa";
 import { ImLab } from "react-icons/im";
 import { IoMdWifi } from "react-icons/io";
+import UC3MLogo from "./UC3MLogo";
+import { EtherealShadow } from "./EtherealShadow";
 import { IoCameraOutline, IoMapOutline } from "react-icons/io5";
 import { MdWeb } from "react-icons/md";
 import { RiRobot2Line } from "react-icons/ri";
@@ -43,7 +45,6 @@ import {
 import { TbCircuitBattery, TbCircuitChangeover, TbMathIntegralX } from "react-icons/tb";
 import SectionAccentLine from "@/components/SectionAccentLine";
 import SectionHeadingHighlight from "@/components/SectionHeadingHighlight";
-import SoftGlowOrb from "@/components/SoftGlowOrb";
 
 const metrics = [
   { label: "Years building robotics systems", value: "5+" },
@@ -302,6 +303,12 @@ export default function HomeContent() {
 
   return (
     <>
+      <EtherealShadow
+        color="rgba(42, 156, 117, 0.25)"
+        animation={{ scale: 100, speed: 72 }}
+        noise={{ opacity: 0.8, scale: 1.2 }}
+        sizing="fill"
+      />
       <header id="about" className="hero scroll-reveal" data-delay="2">
         <div className="hero-grid">
           <div className="hero-copy">
@@ -330,7 +337,6 @@ export default function HomeContent() {
           </div>
 
           <div className="hero-visual">
-            <SoftGlowOrb />
             <div className="hero-image-frame">
               <a
                 className="hero-mini-linkedin"
@@ -556,9 +562,18 @@ export default function HomeContent() {
             <article className="timeline-item" key={item.program}>
               <div>
                 <h3>{item.program}</h3>
-                <p className="muted">
-                  {item.school} - {item.dates}
-                </p>
+                <div className="education-school-row">
+                  <a 
+                    href="https://www.uc3m.es/home" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="education-school-link"
+                  >
+                    <UC3MLogo className="education-logo" />
+                    <span className="muted">{item.school}</span>
+                  </a>
+                  <span className="muted"> - {item.dates}</span>
+                </div>
               </div>
               <p>{item.summary}</p>
             </article>

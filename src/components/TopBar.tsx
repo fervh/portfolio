@@ -1,10 +1,99 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore, useRef, useId } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Award, Briefcase, FileUser, FolderKanban, Mail, Moon, Sun, User, Wrench } from "lucide-react";
+import { EtherealShadow } from "./EtherealShadow";
+
+// Animated header background with turbulence effect
+function HeaderBackground() {
+  const id = useId().replace(/:/g, "");
+  const filterId = `header-turbulence-${id}`;
+  const turbulenceRef = useRef<SVGFETurbulenceElement>(null);
+
+  useEffect(() => {
+    if (!turbulenceRef.current) return;
+    
+    let frame = 0;
+    let animationId: number;
+    
+    const animate = () => {
+      if (turbulenceRef.current) {
+        frame += 0.003; // Slow, subtle movement
+        turbulenceRef.current.setAttribute(
+          'baseFrequency', 
+          `${0.002 + Math.sin(frame) * 0.0008} ${0.004 + Math.cos(frame * 0.8) * 0.001}`
+        );
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    
+    animate();
+    
+    return () => {
+      if (animationId) cancelAnimationFrame(animationId);
+    };
+  }, []);
+
+  return (
+    <div style={{
+      position: 'absolute',
+      inset: 0,
+      overflow: 'hidden',
+      pointerEvents: 'none',
+      zIndex: -2,
+    }}>
+      {/* SVG Filter Definition */}
+      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+        <defs>
+          <filter id={filterId} x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence
+              ref={turbulenceRef}
+              result="turbulence"
+              numOctaves="2"
+              baseFrequency="0.002 0.004"
+              seed="7"
+              type="fractalNoise"
+            />
+            <feDisplacementMap
+              in="SourceGraphic"
+              in2="turbulence"
+              scale="35"
+              xChannelSelector="R"
+              yChannelSelector="G"
+            />
+          </filter>
+        </defs>
+      </svg>
+
+      {/* Animated gradient blob */}
+      <div style={{
+        position: 'absolute',
+        inset: '-40px',
+        filter: `url(#${filterId})`,
+      }}>
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(ellipse 120% 100% at 50% 0%, rgba(42, 156, 117, 0.35) 0%, rgba(42, 156, 117, 0.18) 40%, transparent 70%)',
+        }} />
+      </div>
+
+      {/* Additional atmospheric layer */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '100%',
+        background: 'linear-gradient(90deg, transparent 0%, rgba(42, 156, 117, 0.12) 50%, transparent 100%)',
+        animation: 'headerShimmer 12s ease-in-out infinite',
+      }} />
+    </div>
+  );
+}
 
 const navLinks = [
   { href: "#about", label: "About", Icon: User },
@@ -17,7 +106,7 @@ const navLinks = [
 
 export default function TopBar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
   const router = useRouter();
@@ -31,7 +120,7 @@ export default function TopBar() {
     const root = document.documentElement;
     const media = window.matchMedia("(prefers-color-scheme: dark)");
 
-    const getSystemTheme = () => (media.matches ? "dark" : "light");
+    const getSystemTheme = () => "dark"; // Default to dark
 
     const applyTheme = (nextTheme: "light" | "dark") => {
       root.setAttribute("data-theme", nextTheme);
@@ -43,8 +132,7 @@ export default function TopBar() {
     if (storedTheme === "light" || storedTheme === "dark") {
       applyTheme(storedTheme);
     } else {
-      const initialTheme = (root.getAttribute("data-theme") as "light" | "dark" | null) ?? getSystemTheme();
-      applyTheme(initialTheme);
+      applyTheme("dark"); // Default to dark mode
     }
 
     const handleSystemThemeChange = (event: MediaQueryListEvent) => {
@@ -113,6 +201,7 @@ export default function TopBar() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     // For same-page navigation, use smooth scroll
     e.preventDefault();
+    e.currentTarget.blur(); // Remove focus immediately
     const targetId = href.replace('#', '');
     const target = document.getElementById(targetId);
     if (target) {
@@ -141,6 +230,8 @@ export default function TopBar() {
 
   return (
     <div className={`top-bar ${isScrolled ? "is-scrolled" : ""}`}>
+      {/* Animated turbulence background layer */}
+      <HeaderBackground />
       <div className="brand-mark">
         <span className="brand-dot" />
         <a href="#about" onClick={(e) => handleNavClick(e, '#about')} aria-label="Go to About section">

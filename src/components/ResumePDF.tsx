@@ -368,8 +368,22 @@ const styles = StyleSheet.create({
   },
   educationMeta: {
     fontSize: 9,
-    color: '#666',
-    marginBottom: 3,
+    color: "#444444",
+    marginBottom: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
+  educationLogo: {
+    height: 15,
+    width: 'auto',
+    marginTop: -10,
+  },
+  educationSchoolRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    marginBottom: 4,
   },
   educationDetails: {
     fontSize: 9,
@@ -594,9 +608,14 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
             {cvData.education.map((edu, index) => (
               <View key={index} style={styles.educationItem} wrap={false}>
                 <Text style={styles.educationDegree}>{edu.degree}</Text>
-                <Text style={styles.educationMeta}>
-                  {edu.school} • {edu.year}
-                </Text>
+                <View style={styles.educationSchoolRow}>
+                  <Image 
+                    src="/images/uc3m-logo.png" 
+                    style={styles.educationLogo}
+                  />
+                  <Text style={styles.educationMeta}>{edu.school}</Text>
+                  <Text style={styles.educationMeta}> • {edu.year}</Text>
+                </View>
                 {edu.details && (
                   <Text style={styles.educationDetails}>{edu.details}</Text>
                 )}
