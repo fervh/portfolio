@@ -18,7 +18,7 @@ const EmailIcon = () => (
   <Svg width="9" height="9" viewBox="0 0 24 24" style={{ marginTop: -5 }}>
     <Path
       d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -30,7 +30,7 @@ const EmailIcon = () => (
       width="18"
       height="14"
       rx="2"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       strokeLinecap="round"
       fill="none"
@@ -42,7 +42,7 @@ const LinkedInIcon = () => (
   <Svg width="9" height="9" viewBox="0 0 382 382" style={{ marginTop: -5 }}>
     <Path
       d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472L341.91,330.654L341.91,330.654z"
-      fill="#1e3a8a"
+      fill="#2a9c75"
     />
   </Svg>
 );
@@ -51,7 +51,7 @@ const GithubIcon = () => (
   <Svg width="9" height="9" viewBox="0 0 20 20" style={{ marginTop: -5 }}>
     <Path
       d="M10,0 C15.523,0 20,4.59 20,10.253 C20,14.782 17.138,18.624 13.167,19.981 C12.66,20.082 12.48,19.762 12.48,19.489 C12.48,19.151 12.492,18.047 12.492,16.675 C12.492,15.719 12.172,15.095 11.813,14.777 C14.04,14.523 16.38,13.656 16.38,9.718 C16.38,8.598 15.992,7.684 15.35,6.966 C15.454,6.707 15.797,5.664 15.252,4.252 C15.252,4.252 14.414,3.977 12.505,5.303 C11.706,5.076 10.85,4.962 10,4.958 C9.15,4.962 8.295,5.076 7.497,5.303 C5.586,3.977 4.746,4.252 4.746,4.252 C4.203,5.664 4.546,6.707 4.649,6.966 C4.01,7.684 3.619,8.598 3.619,9.718 C3.619,13.646 5.954,14.526 8.175,14.785 C7.889,15.041 7.63,15.493 7.54,16.156 C6.97,16.418 5.522,16.871 4.63,15.304 C4.63,15.304 4.101,14.319 3.097,14.247 C3.097,14.247 2.122,14.234 3.029,14.87 C3.029,14.87 3.684,15.185 4.139,16.37 C4.139,16.37 4.726,18.2 7.508,17.58 C7.513,18.437 7.522,19.245 7.522,19.489 C7.522,19.76 7.338,20.077 6.839,19.982 C2.865,18.627 0,14.783 0,10.253 C0,4.59 4.478,0 10,0"
-      fill="#1e3a8a"
+      fill="#2a9c75"
       transform="translate(-84, -7399) translate(56, 160) translate(28, 7239)"
     />
   </Svg>
@@ -61,7 +61,7 @@ const GlobeIcon = () => (
   <Svg width="9" height="9" viewBox="0 0 24 24" style={{ marginTop: -5 }}>
     <Path
       d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -69,7 +69,7 @@ const GlobeIcon = () => (
     />
     <Path
       d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -82,7 +82,7 @@ const MapPinIcon = () => (
   <Svg width="9" height="9" viewBox="0 0 24 24" style={{ marginTop: -5 }}>
     <Path
       d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       fill="none"
     />
@@ -90,7 +90,7 @@ const MapPinIcon = () => (
       cx="12"
       cy="10"
       r="3"
-      stroke="#1e3a8a"
+      stroke="#2a9c75"
       strokeWidth="2"
       fill="none"
     />
@@ -147,10 +147,10 @@ const styles = StyleSheet.create({
   page: {
     fontFamily: 'Helvetica',
     fontSize: 9.5,
-    paddingTop: 24,
+    paddingTop: 34,
     paddingBottom: 24,
     paddingHorizontal: 28,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f9f9f8',
     color: '#1a1a1a',
     lineHeight: 1.4,
   },
@@ -158,38 +158,46 @@ const styles = StyleSheet.create({
   // Header Section - Impact style
   header: {
     flexDirection: 'row',
-    gap: 12,
-    marginBottom: 12,
-    paddingBottom: 10,
-    borderBottom: '2.5pt solid #1e3a8a',
-    alignItems: 'flex-start',
+    gap: 14,
+    marginBottom: 14,
+    paddingBottom: 12,
+    paddingTop: 10,
+    paddingHorizontal: 12,
+    borderBottom: '3pt solid #2a9c75',
+    backgroundColor: '#f5fcf9',
+    alignItems: 'center',
+    marginHorizontal: -12,
+    marginTop: -10,
   },
   portrait: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    width: 75,
+    height: 75,
+    borderRadius: 38,
     objectFit: 'cover',
+    border: '2pt solid #2a9c75',
   },
   headerInfo: {
     flex: 1,
   },
   name: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 700,
-    marginBottom: 4,
-    color: '#1e3a8a',
-    letterSpacing: -0.3,
+    marginBottom: 5,
+    color: '#2a9c75',
+    letterSpacing: -0.4,
   },
   role: {
-    fontSize: 10,
+    fontSize: 5.5,
     fontWeight: 600,
-    color: '#1e3a8a',
-    marginBottom: 5,
+    color: '#1f7d5c',
+    marginTop: 10,
+    marginBottom: 6,
+    letterSpacing: 0.3,
   },
   headline: {
-    fontSize: 8,
-    color: '#555',
-    lineHeight: 1.3,
+    fontSize: 8.5,
+    color: '#444',
+    lineHeight: 1.4,
     textAlign: 'justify',
   },
   
@@ -197,10 +205,13 @@ const styles = StyleSheet.create({
   contactBar: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 6,
-    marginBottom: 12,
-    paddingBottom: 8,
-    borderBottom: '0.75pt solid #ddd',
+    gap: 7,
+    marginBottom: 14,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingHorizontal: 10,
+    backgroundColor: '#fafaf9',
+    borderRadius: 4,
     alignItems: 'center',
   },
   contactItem: {
@@ -209,32 +220,31 @@ const styles = StyleSheet.create({
     textDecoration: 'none',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 2.5,
+    gap: 3,
   },
   contactLink: {
     fontSize: 7.5,
-    color: '#1e3a8a',
+    color: '#2a9c75',
     textDecoration: 'none',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 2.5,
+    fontWeight: 600,
   },
   contactDivider: {
-    color: '#ccc',
-    fontSize: 7.5,
+    fontSize: 8,
+    color: '#c9c3b7',
+    marginHorizontal: 2,
   },
   
   // Section
   section: {
-    marginBottom: 11,
+    marginBottom: 13,
   },
   sectionHeader: {
     fontSize: 12,
     fontWeight: 700,
-    color: '#1e3a8a',
-    marginBottom: 6,
-    paddingBottom: 3,
-    borderBottom: '1.5pt solid #1e3a8a',
+    color: '#2a9c75',
+    marginBottom: 7,
+    paddingBottom: 3.5,
+    borderBottom: '1.5pt solid #2a9c75',
     letterSpacing: 0.3,
   },
   
@@ -257,7 +267,7 @@ const styles = StyleSheet.create({
   },
   bullet: {
     fontSize: 8,
-    color: '#1e3a8a',
+    color: '#2a9c75',
     marginTop: 0.5,
     minWidth: 8,
   },
@@ -274,7 +284,9 @@ const styles = StyleSheet.create({
   twoColumn: {
     flexDirection: 'row',
     gap: 16,
-    marginBottom: 11,
+    marginBottom: 13,
+    paddingBottom: 8,
+    borderBottom: '0.5pt solid #e5e5e5',
   },
   column: {
     flex: 1,
@@ -282,12 +294,12 @@ const styles = StyleSheet.create({
   
   // Experience Items - Impact style with tight justified text
   experienceItem: {
-    marginBottom: 8,
-    paddingBottom: 8,
-    borderBottom: '0.5pt solid #e5e5e5',
+    marginBottom: 10,
+    paddingBottom: 10,
+    borderBottom: '1pt solid #c9c3b7',
   },
   experienceLastItem: {
-    marginBottom: 8,
+    marginBottom: 10,
     paddingBottom: 0,
     borderBottom: 'none',
   },
@@ -303,6 +315,8 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
     flex: 1,
     letterSpacing: -0.1,
+    textDecoration: 'underline',
+    textDecorationColor: '#2a9c75',
   },
   experienceMeta: {
     fontSize: 7,
@@ -313,7 +327,7 @@ const styles = StyleSheet.create({
   experienceCompany: {
     fontSize: 9,
     fontWeight: 600,
-    color: '#444',
+    color: '#1f7d5c',
     marginBottom: 4,
     letterSpacing: -0.05,
   },
@@ -328,7 +342,7 @@ const styles = StyleSheet.create({
   },
   experienceBulletMark: {
     fontSize: 7,
-    color: '#1e3a8a',
+    color: '#2a9c75',
     marginTop: 0.5,
     minWidth: 6,
     flexShrink: 0,
@@ -344,7 +358,10 @@ const styles = StyleSheet.create({
   outcomeLabel: {
     fontSize: 8,
     fontWeight: 700,
-    color: '#1e3a8a',
+    color: '#2a9c75',
+    backgroundColor: '#f5fcf9',
+    paddingHorizontal: 3,
+    paddingVertical: 1,
   },
   outcomeText: {
     fontSize: 8,
@@ -357,13 +374,17 @@ const styles = StyleSheet.create({
   
   // Projects
   projectItem: {
-    marginBottom: 8,
+    marginBottom: 10,
+    paddingBottom: 8,
+    borderBottom: '0.5pt solid #e5e5e5',
   },
   projectName: {
     fontSize: 10,
     fontWeight: 700,
     color: '#1a1a1a',
     marginBottom: 2.5,
+    textDecoration: 'underline',
+    textDecorationColor: '#2a9c75',
   },
   projectDetails: {
     fontSize: 8.5,
@@ -377,19 +398,23 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   stackLabel: {
-    fontWeight: 600,
-    color: '#444',
+    fontWeight: 700,
+    color: '#2a9c75',
   },
   
   // Education
   educationItem: {
-    marginBottom: 8,
+    marginBottom: 10,
+    paddingBottom: 8,
+    borderBottom: '0.5pt solid #e5e5e5',
   },
   educationDegree: {
     fontSize: 10,
     fontWeight: 700,
     color: '#1a1a1a',
     marginBottom: 2,
+    textDecoration: 'underline',
+    textDecorationColor: '#2a9c75',
   },
   educationMeta: {
     fontSize: 8.5,
@@ -419,12 +444,14 @@ const styles = StyleSheet.create({
   
   // Skills
   skillItem: {
-    marginBottom: 7,
+    marginBottom: 8,
+    paddingBottom: 6,
+    borderBottom: '0.5pt solid #f0f0f0',
   },
   skillTitle: {
     fontSize: 9.5,
     fontWeight: 700,
-    color: '#1a1a1a',
+    color: '#1f7d5c',
     marginBottom: 2,
   },
   skillValues: {
@@ -435,12 +462,14 @@ const styles = StyleSheet.create({
   
   // Certifications
   certificationItem: {
-    marginBottom: 7,
+    marginBottom: 8,
+    paddingBottom: 6,
+    borderBottom: '0.5pt solid #f0f0f0',
   },
   certificationTitle: {
     fontSize: 9.5,
     fontWeight: 700,
-    color: '#1a1a1a',
+    color: '#1f7d5c',
     marginBottom: 2,
   },
   certificationList: {
@@ -455,7 +484,42 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
     marginBottom: 8,
   },
+  
+  // Utility styles for emphasis
+  bold: {
+    fontWeight: 700,
+  },
+  underline: {
+    textDecoration: 'underline',
+    textDecorationColor: '#2a9c75',
+  },
+  highlight: {
+    backgroundColor: '#d7f3ea',
+    paddingHorizontal: 2,
+  },
+  boldUnderline: {
+    fontWeight: 700,
+    textDecoration: 'underline',
+    textDecorationColor: '#2a9c75',
+  },
 });
+
+// Helper function to parse text with **bold** markers
+const parseTextWithBold = (text: string, baseStyle: any) => {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      const content = part.slice(2, -2);
+      return (
+        <Text key={index} style={[baseStyle, styles.boldUnderline]}>
+          {content}
+        </Text>
+      );
+    }
+    return part;
+  });
+};
 
 const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, portraitImage }) => {
   const cvData = data;
@@ -477,7 +541,9 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           <View style={styles.headerInfo}>
             <Text style={styles.name}>{cvData.name}</Text>
             <Text style={styles.role}>{cvData.role}</Text>
-            <Text style={styles.headline}>{cvData.headline}</Text>
+            <Text style={styles.headline}>
+              {parseTextWithBold(cvData.headline, styles.headline)}
+            </Text>
           </View>
         </View>
 
@@ -520,7 +586,9 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
         {/* Profile Summary */}
         <View style={styles.section} wrap={false}>
           <Text style={styles.sectionHeader}>Profile</Text>
-          <Text style={styles.summaryText}>{cvData.summary}</Text>
+          <Text style={styles.summaryText}>
+            {parseTextWithBold(cvData.summary, styles.summaryText)}
+          </Text>
         </View>
 
         {/* Metrics */}
@@ -536,21 +604,21 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           </View>
         </View>
 
-        {/* Two Column: Leadership & Core Technical Skills */}
+        {/* Technical Skills */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>Technical Skills</Text>
+          {cvData.skillGroups.map((group, index) => (
+            <View key={index} style={styles.skillItem} wrap={false}>
+              <Text style={styles.skillTitle}>{group.title}</Text>
+              <Text style={styles.skillValues}>{group.values}</Text>
+            </View>
+          ))}
+        </View>
+
+        {/* Two Column: Core Skills & Additional Strengths */}
         <View style={styles.twoColumn} wrap={false}>
           <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Leadership</Text>
-            <View style={styles.bulletList}>
-              {cvData.leadershipAreas.map((item, index) => (
-                <View key={index} style={styles.bulletItem}>
-                  <Text style={styles.bullet}>•</Text>
-                  <Text style={styles.bulletText}>{item}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
-          <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Core Technical</Text>
+            <Text style={styles.sectionHeader}>Core Skills</Text>
             <View style={styles.bulletList}>
               {cvData.autonomyExpertise.map((item, index) => (
                 <View key={index} style={styles.bulletItem}>
@@ -560,18 +628,16 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
               ))}
             </View>
           </View>
-        </View>
-
-        {/* Systems & Architecture */}
-        <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Systems & Architecture</Text>
-          <View style={styles.bulletList}>
-            {cvData.systemsReliability.map((item, index) => (
-              <View key={index} style={styles.bulletItem}>
-                <Text style={styles.bullet}>•</Text>
-                <Text style={styles.bulletText}>{item}</Text>
-              </View>
-            ))}
+          <View style={styles.column}>
+            <Text style={styles.sectionHeader}>Additional Strengths</Text>
+            <View style={styles.bulletList}>
+              {cvData.leadershipAreas.map((item, index) => (
+                <View key={index} style={styles.bulletItem}>
+                  <Text style={styles.bullet}>•</Text>
+                  <Text style={styles.bulletText}>{item}</Text>
+                </View>
+              ))}
+            </View>
           </View>
         </View>
       </Page>
@@ -597,37 +663,26 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
                 {exp.bullets.map((bullet, bIndex) => (
                   <View key={bIndex} style={styles.experienceBullet}>
                     <Text style={styles.experienceBulletMark}>•</Text>
-                    <Text style={styles.experienceBulletText}>{bullet}</Text>
+                    <Text style={styles.experienceBulletText}>
+                      {parseTextWithBold(bullet, styles.experienceBulletText)}
+                    </Text>
                   </View>
                 ))}
               </View>
               <Text>
                 <Text style={styles.outcomeLabel}>Outcome: </Text>
-                <Text style={styles.outcomeText}>{exp.impact}</Text>
-              </Text>
-            </View>
-          ))}
-        </View>
-
-        {/* Self-Development Projects */}
-        <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Self-Development Projects</Text>
-          {cvData.projects.map((project, index) => (
-            <View key={index} style={styles.projectItem} wrap={false}>
-              <Text style={styles.projectName}>{project.name}</Text>
-              <Text style={styles.projectDetails}>{project.details}</Text>
-              <Text style={styles.projectStack}>
-                <Text style={styles.stackLabel}>Stack: </Text>
-                {project.stack}
+                <Text style={styles.outcomeText}>
+                  {parseTextWithBold(exp.impact, styles.outcomeText)}
+                </Text>
               </Text>
             </View>
           ))}
         </View>
       </Page>
 
-      {/* Page 3: Education, Technical Skills, Achievements, Languages, Certifications */}
+      {/* Page 3: Education, Self-Development Projects, Languages, Achievements & Certifications */}
       <Page size="A4" style={styles.page}>
-        {/* Two Column: Education & Technical Skills */}
+        {/* Two Column: Education & Self-Development Projects */}
         <View style={styles.twoColumn}>
           <View style={styles.column}>
             <Text style={styles.sectionHeader}>Education</Text>
@@ -643,18 +698,26 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
                   <Text style={styles.educationMeta}> • {edu.year}</Text>
                 </View>
                 {edu.details && (
-                  <Text style={styles.educationDetails}>{edu.details}</Text>
+                  <Text style={styles.educationDetails}>
+                    {parseTextWithBold(edu.details, styles.educationDetails)}
+                  </Text>
                 )}
               </View>
             ))}
           </View>
 
           <View style={styles.column}>
-            <Text style={styles.sectionHeader}>Technical Skills</Text>
-            {cvData.skillGroups.map((group, index) => (
-              <View key={index} style={styles.skillItem} wrap={false}>
-                <Text style={styles.skillTitle}>{group.title}</Text>
-                <Text style={styles.skillValues}>{group.values}</Text>
+            <Text style={styles.sectionHeader}>Self-Development Projects</Text>
+            {cvData.projects.map((project, index) => (
+              <View key={index} style={styles.projectItem} wrap={false}>
+                <Text style={styles.projectName}>{project.name}</Text>
+                <Text style={styles.projectDetails}>
+                  {parseTextWithBold(project.details, styles.projectDetails)}
+                </Text>
+                <Text style={styles.projectStack}>
+                  <Text style={styles.stackLabel}>Stack: </Text>
+                  {project.stack}
+                </Text>
               </View>
             ))}
           </View>
@@ -672,7 +735,18 @@ const ResumePDF: React.FC<{ data: CVData; portraitImage?: string }> = ({ data, p
           {cvData.certificationGroups.map((group, index) => (
             <View key={index} style={styles.certificationItem} wrap={false}>
               <Text style={styles.certificationTitle}>{group.title}</Text>
-              <Text style={styles.certificationList}>{group.items.join(' • ')}</Text>
+              {group.title === "Achievements" ? (
+                <View style={styles.bulletList}>
+                  {group.items.map((item, itemIndex) => (
+                    <View key={itemIndex} style={styles.bulletItem}>
+                      <Text style={styles.bullet}>•</Text>
+                      <Text style={styles.bulletText}>{item}</Text>
+                    </View>
+                  ))}
+                </View>
+              ) : (
+                <Text style={styles.certificationList}>{group.items.join(' • ')}</Text>
+              )}
             </View>
           ))}
         </View>

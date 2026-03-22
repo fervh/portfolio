@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 const cvData: CVData = {
   name: "Fernando Vela Hidalgo",
   role: "Senior Software Engineer - R&D Robotic Engineer",
-  headline: "I bridge research and production through full-stack development, embedded systems, and hardware integration for autonomous platforms. My work spans LiDAR/camera perception pipelines, real-time control systems, backend services, and frontend interfaces. Coordinating across software, hardware, and team workflows for UAVs and intelligent vehicles.",
+  headline: "I bridge research and production through **full-stack development**, **embedded systems**, and **hardware integration** for autonomous platforms. My work spans **LiDAR/camera perception pipelines**, **real-time control systems**, backend services, and frontend interfaces. Coordinating across software, hardware, and team workflows for **UAVs** and intelligent vehicles.",
   email: "contact@velahidalgo.com",
   linkedin: "linkedin.com/in/fernandovelahidalgo",
   github: "github.com/fervh",
   website: "fernandovelahidalgo.com",
   location: "Hamburg, Germany",
   
-  summary: "Robotics engineer specialized in autonomy stack integration and lead-level technical ownership for systems that must perform outside the lab. I focus on LiDAR/camera perception pipelines, low-level communications, and real-time control loops that turn prototypes into production-ready systems.",
+  summary: "Robotics engineer specialized in **autonomy stack integration** and lead-level technical ownership for production-grade autonomous systems. My work spans **embedded systems development** (STM32, ARM, FreeRTOS/NuttX), **flight control software** (PX4, ArduPilot), and **perception pipelines** integrating LiDAR, cameras, and multi-sensor fusion. I architect and implement **real-time software stacks** for autonomous UAVs and intelligent vehicles, bridging low-level firmware with high-level autonomy behaviors. I focus on production-ready reliability: system-level debugging, **hardware-software integration**, validation frameworks, and **safety-critical design**. My approach combines research rigor with engineering pragmatism, delivering deployable solutions for real-world autonomous operations across Europe.",
   
   impactHighlights: [
     "5+ Years building robotics systems",
     "20+ Autonomy and perception programs",
-    "Regions worked: ES / DE",
+    "Regions worked: Spain and Germany",
   ],
   
   leadershipAreas: [
@@ -33,6 +33,8 @@ const cvData: CVData = {
     "System architecture from prototype to production",
     "Clear technical documentation and stakeholder communication",
     "Experiment design, validation, and iterative optimization",
+    "Cross-functional collaboration and knowledge transfer",
+    "Adaptability to dynamic project requirements and constraints",
   ],
   
   autonomyExpertise: [
@@ -64,14 +66,14 @@ const cvData: CVData = {
       dates: "Sep 2025 - Present · Full-time",
       location: "Hamburg, Germany",
       bullets: [
-        "Architect, develop, and maintain the full UAV software stack, spanning low-level firmware, middleware, and high-level embedded applications on STM32 and ARM-based systems. Work extensively with embedded computing platforms, optimizing performance across constrained hardware and heterogeneous architectures.",
-        "Design and implement flight control systems for fixed-wing and VTOL platforms, focusing on safety-critical performance, robustness, and fault tolerance. Contribute to and extend open-source autopilot frameworks (PX4, ArduPilot), improving modularity, performance, and system reliability.",
-        "Develop and integrate perception pipelines using LiDAR, cameras, and onboard sensors for real-time environmental awareness and autonomous decision-making. Implement real-time data processing and sensor fusion under RTOS environments (FreeRTOS, NuttX), ensuring deterministic and low-latency behavior.",
-        "Integrate, validate, and debug hardware-software interfaces (USB, SPI, I2C, CAN, SDIO), ensuring reliable communication across avionics and sensor subsystems. Perform system-level debugging and root-cause analysis, resolving complex issues across firmware, hardware, and distributed components.",
-        "Define and document system and software architectures, enabling scalability, maintainability, and clean interfaces across subsystems. Develop internal tooling, simulation environments, and automated testing frameworks for validation and continuous integration of UAV systems.",
-        "Collaborate with cross-functional teams (hardware, perception, systems, operations) to align software with mission requirements and improve overall performance. Drive continuous improvement in software quality, reliability, and engineering processes within safety-critical environments.",
+        "Architect, develop, and maintain the **full UAV software stack**, spanning low-level firmware, middleware, and high-level embedded applications on **STM32** and **ARM-based systems**. Work extensively with embedded computing platforms, optimizing performance across constrained hardware and heterogeneous architectures.",
+        "Design and implement **flight control systems** for fixed-wing and VTOL platforms, focusing on **safety-critical performance**, robustness, and fault tolerance. Contribute to and extend open-source **autopilot frameworks** (PX4, ArduPilot), improving modularity, performance, and system reliability.",
+        "Develop and integrate **perception pipelines** using LiDAR, cameras, and onboard sensors for real-time environmental awareness and autonomous decision-making. Implement **real-time data processing** and **sensor fusion** under **RTOS environments** (FreeRTOS, NuttX), ensuring deterministic and low-latency behavior.",
+        "Integrate, validate, and debug **hardware-software interfaces** (USB, SPI, I2C, CAN, SDIO), ensuring reliable communication across avionics and sensor subsystems. Perform **system-level debugging** and root-cause analysis, resolving complex issues across firmware, hardware, and distributed components.",
+        "Define and document **system and software architectures**, enabling scalability, maintainability, and clean interfaces across subsystems. Develop internal tooling, **simulation environments**, and **automated testing frameworks** for validation and continuous integration of UAV systems.",
+        "Collaborate with cross-functional teams (hardware, perception, systems, operations) to align software with mission requirements and improve overall performance. Drive continuous improvement in software quality, reliability, and engineering processes within **safety-critical environments**.",
       ],
-      impact: "Enhanced autonomous flight capabilities through tight integration of perception, control, and embedded systems. Increased system reliability and reduced failure rates via structured debugging and validation methodologies. Contributed to scalable UAV platforms ready for long-range autonomous operations in real-world environments.",
+      impact: "Enhanced **autonomous flight capabilities** through tight integration of perception, control, and embedded systems. Increased **system reliability** and reduced failure rates via structured debugging and **validation methodologies**. Contributed to scalable UAV platforms ready for **long-range autonomous operations** in real-world environments.",
     },
     {
       role: "Research Engineer - Autonomous Vehicle Technologies",
@@ -79,13 +81,13 @@ const cvData: CVData = {
       dates: "Aug 2023 - Jul 2025 · Full-time",
       location: "Madrid, Spain",
       bullets: [
-        "Designed and implemented perception systems using computer vision and machine learning for environment detection and scene understanding. Built and validated AI models for real-time perception in dynamic scenarios.",
-        "Developed mapping and localization algorithms for intelligent vehicle navigation. Contributed to the architecture and design of autonomous systems, including sensor layouts and real-time data processing pipelines.",
-        "Performed integration, setup, calibration, and validation of sensor systems (LiDAR, cameras, IMU, GNSS) in real-world environments. Defined data structures and pipelines for efficient acquisition and processing of multimodal sensor data.",
-        "Designed algorithms for data verification, validation, and security, ensuring robustness in safety-critical systems. Developed proof-of-concept solutions and use cases for connected and autonomous vehicle (CAV) environments.",
-        "Contributed to hybrid mobility systems, integrating connected and automated vehicles in mixed environments.",
+        "Designed and implemented **perception systems** using **computer vision** and **machine learning** for environment detection and scene understanding. Built and validated **AI models** for real-time perception in dynamic scenarios.",
+        "Developed **mapping and localization algorithms** for intelligent vehicle navigation. Contributed to the architecture and design of **autonomous systems**, including sensor layouts and **real-time data processing pipelines**.",
+        "Performed integration, setup, **calibration**, and validation of **sensor systems** (LiDAR, cameras, IMU, GNSS) in real-world environments. Defined data structures and pipelines for efficient acquisition and processing of **multimodal sensor data**.",
+        "Designed algorithms for **data verification, validation, and security**, ensuring robustness in safety-critical systems. Developed proof-of-concept solutions and use cases for **connected and autonomous vehicle (CAV)** environments.",
+        "Contributed to **hybrid mobility systems**, integrating connected and automated vehicles in mixed environments.",
       ],
-      impact: "Improved perception accuracy and robustness through optimized sensor integration and system design. Enabled scalable architectures for real-time autonomous driving systems. Bridged research and engineering by delivering deployable, validated solutions.",
+      impact: "Improved **perception accuracy** and robustness through optimized sensor integration and system design. Enabled **scalable architectures** for real-time autonomous driving systems. Bridged research and engineering by delivering deployable, validated solutions.",
     },
     {
       role: "Technical Bid Engineer - Internship",
@@ -116,17 +118,17 @@ const cvData: CVData = {
   projects: [
     {
       name: "Drone Design and Construction",
-      details: "Built FPV and autonomous drones using custom electronics, 3D-printed frames, and iterative control tuning. Impact: Reliable flight behavior under real-world field conditions.",
+      details: "Built **FPV** and **autonomous drones** using custom electronics, 3D-printed frames, and iterative control tuning. Impact: Reliable flight behavior under real-world field conditions.",
       stack: "PX4, Embedded, Control, 3D Printing",
     },
     {
       name: "VR Development for Robotics Control",
-      details: "Developed Unity and ROS interfaces for immersive teleoperation and real-time robotics interaction experiments. Impact: Reduced iteration time in operator training and HMI validation.",
+      details: "Developed **Unity** and **ROS interfaces** for immersive teleoperation and real-time robotics interaction experiments. Impact: Reduced iteration time in operator training and HMI validation.",
       stack: "Unity, ROS, C#, Realtime",
     },
     {
       name: "Design and Additive Manufacturing",
-      details: "FDM workflow optimization, slicer tuning, and functional prototyping across engineering-grade materials. Impact: Faster prototyping cycles with more robust mechanical iterations.",
+      details: "**FDM workflow** optimization, slicer tuning, and functional prototyping across engineering-grade materials. Impact: Faster prototyping cycles with more robust mechanical iterations.",
       stack: "CAD, FDM, Materials, Rapid Prototyping",
     },
   ],
@@ -136,13 +138,13 @@ const cvData: CVData = {
       degree: "Master's Degree in Robotics and Automation",
       school: "Carlos III University of Madrid (UC3M)",
       year: "2023 - 2025",
-      details: "Master thesis: Vehicle Immersion System / immersive VR platform for real-time interaction (10/10).",
+      details: "Master thesis: **Vehicle Immersion System** / immersive VR platform for real-time interaction (10/10).",
     },
     {
       degree: "B.Sc. Industrial Electronics and Automation Engineering (Bilingual)",
       school: "Carlos III University of Madrid (UC3M)",
       year: "2019 - 2023",
-      details: "Final degree thesis: Miniature Autonomous Vehicle.",
+      details: "Final degree thesis: **Miniature Autonomous Vehicle**.",
     },
   ],
   
@@ -165,21 +167,10 @@ const cvData: CVData = {
     {
       title: "Achievements",
       items: [
-        "Master Thesis: Vehicle Immersion System (2025) - Immersive VR interaction platform for autonomous and teleoperated vehicle workflows",
-        "Final Degree Thesis: Miniature Autonomous Vehicle (2023) - End-to-end design and implementation of a working miniature autonomous mobility system",
-        "1st Place - ASTI Robotics Competition (2019) - Awarded for robotics innovation, implementation quality, and technical execution",
-        "Young Researchers Finalist (Complutense) - Recognized for technical research contribution and experimental rigor",
-      ],
-    },
-    {
-      title: "Capability Signals",
-      items: [
-        "LiDAR and Camera Detection (92%)",
-        "Sensor Calibration and Synchronization (90%)",
-        "ROS2 and Real-time Integration (93%)",
-        "CAN/FlexRay and Low-level Comms (88%)",
-        "System Validation and Observability (89%)",
-        "Technical Leadership and Execution (86%)",
+        "Master Thesis: Vehicle Immersion System (2025)",
+        "Final Degree Thesis: Miniature Autonomous Vehicle (2023)",
+        "1st Place - ASTI Robotics Competition (2019)",
+        "Young Researchers Finalist (Complutense)",
       ],
     },
     {
