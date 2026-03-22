@@ -52,43 +52,109 @@ const metrics = [
   { label: "Regions worked", value: "ES / DE" },
 ];
 
+const coreSkillCategories = [
+  {
+    title: "Embedded & Systems Engineering",
+    skills: [
+      "Embedded Systems (C/C++, ARM, STM32)",
+      "Low-level & high-level software integration",
+      "Real-Time Systems (FreeRTOS, NuttX)",
+      "Hardware-software integration & debugging",
+    ],
+  },
+  {
+    title: "Autonomy & Robotics",
+    skills: [
+      "UAV Autonomy & Flight Control (PX4, ArduPilot)",
+      "Sensor Fusion & Perception (LiDAR, Cameras, IMU, GNSS)",
+      "Computer Vision & AI for autonomous systems",
+      "Mapping, localization, and environment understanding",
+    ],
+  },
+  {
+    title: "Systems & Architecture",
+    skills: [
+      "System Architecture Design (embedded & distributed systems)",
+      "Safety-critical systems & reliability engineering",
+      "Real-time data pipelines and performance optimization",
+    ],
+  },
+  {
+    title: "Communication & Interfaces",
+    skills: [
+      "CAN, SPI, I2C, USB, SDIO",
+      "MAVLink and UAV communication protocols",
+    ],
+  },
+  {
+    title: "Engineering & Tools",
+    skills: [
+      "Debugging & root-cause analysis (system-level)",
+      "Simulation, testing, and validation frameworks",
+      "Cross-functional collaboration (hardware, software, systems)",
+    ],
+  },
+];
+
 const experience = [
   {
-    role: "Senior Software Engineer",
+    role: "Senior Software Engineer - UAV Systems",
     company: "Beagle Systems",
-    dates: "Sep 2025 - Present",
+    dates: "Sep 2025 - Present · Full-time",
     location: "Hamburg, Germany",
     summary:
-      "Design and optimization of flight control and embedded software for long-range UAV operations.",
+      "Design, develop, and optimize flight control, perception, and embedded software for long-range UAVs, enabling safe and scalable BVLOS operations across Europe.",
     highlights: [
-      "Developed flight control stacks and firmware drivers for STM32 and ARM platforms.",
-      "Implemented real-time capabilities with FreeRTOS and NuttX for fixed-wing and VTOL systems.",
-      "Integrated USB, SPI, I2C, CAN, and SDIO interfaces to improve mission reliability.",
+      "Architect, develop, and maintain the full UAV software stack, spanning low-level firmware, middleware, and high-level embedded applications on STM32 and ARM-based systems.",
+      "Design and implement flight control systems for fixed-wing and VTOL platforms, focusing on safety-critical performance, robustness, and fault tolerance.",
+      "Develop and integrate perception pipelines using LiDAR, cameras, and onboard sensors for real-time environmental awareness and autonomous decision-making.",
+      "Implement real-time data processing and sensor fusion under RTOS environments (FreeRTOS, NuttX), ensuring deterministic and low-latency behavior.",
+      "Work extensively with embedded computing platforms, optimizing performance across constrained hardware and heterogeneous architectures.",
+      "Integrate, validate, and debug hardware-software interfaces (USB, SPI, I2C, CAN, SDIO), ensuring reliable communication across avionics and sensor subsystems.",
+      "Perform system-level debugging and root-cause analysis, resolving complex issues across firmware, hardware, and distributed components.",
+      "Contribute to and extend open-source autopilot frameworks (PX4, ArduPilot), improving modularity, performance, and system reliability.",
+      "Define and document system and software architectures, enabling scalability, maintainability, and clean interfaces across subsystems.",
+      "Develop internal tooling, simulation environments, and automated testing frameworks for validation and continuous integration of UAV systems.",
+      "Collaborate with cross-functional teams (hardware, perception, systems, operations) to align software with mission requirements and improve overall performance.",
+      "Drive continuous improvement in software quality, reliability, and engineering processes within safety-critical environments.",
     ],
+    impact: "Enhanced autonomous flight capabilities through tight integration of perception, control, and embedded systems. Increased system reliability and reduced failure rates via structured debugging and validation methodologies. Contributed to scalable UAV platforms ready for long-range autonomous operations in real-world environments.",
   },
   {
-    role: "Research Technician - Autonomous Vehicles",
+    role: "Research Engineer - Autonomous Vehicle Technologies",
     company: "Autonomous Mobility and Perception Lab (AMPL)",
-    dates: "Aug 2023 - Jul 2025",
+    dates: "Aug 2023 - Jul 2025 · Full-time",
     location: "Madrid, Spain",
     summary:
-      "R&D for intelligent mobility systems, combining real-time perception, communication, and validation.",
+      "Design and development of perception systems, sensor architectures, and AI-driven solutions for autonomous and connected vehicles.",
     highlights: [
-      "Built ROS/ROS2 sensor drivers in C++ and Python for IMU, LiDAR, and camera pipelines.",
-      "Developed ECU-level communication over CAN bus and low-level real-time control modules.",
-      "Delivered streaming and monitoring systems with UDP/TCP/WebRTC/SRT and Grafana dashboards.",
+      "Designed and implemented perception systems using computer vision and machine learning for environment detection and scene understanding.",
+      "Developed mapping and localization algorithms for intelligent vehicle navigation.",
+      "Contributed to the architecture and design of autonomous systems, including sensor layouts and real-time data processing pipelines.",
+      "Performed integration, setup, calibration, and validation of sensor systems (LiDAR, cameras, IMU, GNSS) in real-world environments.",
+      "Defined data structures and pipelines for efficient acquisition and processing of multimodal sensor data.",
+      "Built and validated AI models for real-time perception in dynamic scenarios.",
+      "Designed algorithms for data verification, validation, and security, ensuring robustness in safety-critical systems.",
+      "Developed proof-of-concept solutions and use cases for connected and autonomous vehicle (CAV) environments.",
+      "Contributed to hybrid mobility systems, integrating connected and automated vehicles in mixed environments.",
     ],
+    impact: "Improved perception accuracy and robustness through optimized sensor integration and system design. Enabled scalable architectures for real-time autonomous driving systems. Bridged research and engineering by delivering deployable, validated solutions.",
   },
   {
-    role: "Technical Bids Intern",
+    role: "Technical Bid Engineer - Internship",
     company: "Serveo",
     dates: "Sep 2022 - Mar 2023",
     location: "Madrid, Spain",
     summary:
-      "Supported technology tenders and technical proposals for smart city and digitalization programs.",
+      "Supported the design and delivery of technical and economic proposals for large-scale public-sector projects across smart infrastructure domains.",
     highlights: [
-      "Contributed to technical documentation and partner coordination in IoT and AI/ML initiatives.",
+      "Designed end-to-end technical solutions for public tenders in Smart Cities, Smart Energy, Smart Buildings, and Transport Systems.",
+      "Structured and coordinated bid strategies, ensuring timely and high-quality proposal submissions.",
+      "Integrated advanced technologies into proposals, including Intelligent Transport Systems (ITS), Computer Vision and AI-based video analytics, IoT platforms and data-driven services, and Cloud ecosystems (Azure, AWS, GCP).",
+      "Positioned digitalization technologies including automation, robotics, digital twins, and augmented reality in competitive public tenders.",
+      "Collaborated with multidisciplinary teams and partners to align technical capabilities with client requirements.",
     ],
+    impact: "Strengthened the technological positioning of proposals in competitive public tenders and contributed to delivering innovation-driven, high-value infrastructure solutions.",
   },
 ];
 
@@ -253,6 +319,7 @@ const languages = ["Spanish (native)", "English (C1)", "German (A2)"];
 
 export default function HomeContent() {
   const [activeSkillCluster, setActiveSkillCluster] = useState(skillClusters[0].title);
+  const [activeCoreSkillCategory, setActiveCoreSkillCategory] = useState(coreSkillCategories[0].title);
   const getSkillId = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   // Handle hash navigation on page load
@@ -315,8 +382,7 @@ export default function HomeContent() {
             <p className="eyebrow">Portfolio</p>
             <h1>Senior Software Engineer - R&D Robotic Engineer</h1>
             <p className="lead">
-              I bridge research and product delivery through embedded software, LiDAR/camera
-              detection pipelines, and control systems for UAVs and intelligent vehicles.
+              I bridge research and production through full-stack development, embedded systems, and hardware integration for autonomous platforms. My work spans LiDAR/camera perception pipelines, real-time control systems, backend services, and frontend interfaces. Coordinating across software, hardware, and team workflows for UAVs and intelligent vehicles.
             </p>
             <div className="hero-actions">
               <a href="#contact" className="cta-button">
@@ -412,6 +478,11 @@ export default function HomeContent() {
                   <li key={point}>{point}</li>
                 ))}
               </ul>
+              {item.impact && (
+                <p className="timeline-impact" style={{ marginTop: '1rem', fontStyle: 'italic', color: 'var(--muted)' }}>
+                  <strong>Impact:</strong> {item.impact}
+                </p>
+              )}
             </article>
           ))}
         </div>
@@ -451,53 +522,94 @@ export default function HomeContent() {
 
       <section id="skills" className="section-flow scroll-reveal" data-delay="7">
         <div className="section-header">
-          <SectionHeadingHighlight title="Technical Skills" highlight="Skills" />
+          <SectionHeadingHighlight title="Skills" highlight="Skills" />
           <span className="section-tag">04</span>
         </div>
         <SectionAccentLine />
-        <div className="skill-clusters">
-          <div className="skill-filter" role="tablist" aria-label="Skill categories">
-            {skillClusters.map((cluster) => (
+        
+        {/* Core Skills Section */}
+        <div className="core-skills-section">
+          <h3 className="section-subtitle">Core Skills</h3>
+          
+          <div className="skill-filter" role="tablist" aria-label="Core skill categories">
+            {coreSkillCategories.map((category) => (
               <button
-                key={cluster.title}
+                key={category.title}
                 type="button"
-                id={`skill-tab-${getSkillId(cluster.title)}`}
                 role="tab"
-                aria-controls={`skill-panel-${getSkillId(cluster.title)}`}
-                aria-selected={activeSkillCluster === cluster.title}
-                className={`skill-filter-btn ${activeSkillCluster === cluster.title ? "is-active" : ""}`}
-                onClick={() => setActiveSkillCluster(cluster.title)}
+                aria-selected={activeCoreSkillCategory === category.title}
+                className={`skill-filter-btn ${activeCoreSkillCategory === category.title ? "is-active" : ""}`}
+                onClick={() => setActiveCoreSkillCategory(category.title)}
               >
-                <cluster.icon className="skill-filter-icon" aria-hidden="true" />
-                {cluster.title}
+                {category.title}
               </button>
             ))}
           </div>
 
-          {skillClusters
-            .filter((cluster) => cluster.title === activeSkillCluster)
-            .map((cluster) => (
+          {coreSkillCategories
+            .filter((category) => category.title === activeCoreSkillCategory)
+            .map((category) => (
               <article
-                className="skill-cluster"
-                key={cluster.title}
-                id={`skill-panel-${getSkillId(cluster.title)}`}
+                className="core-skill-panel"
+                key={category.title}
                 role="tabpanel"
-                aria-labelledby={`skill-tab-${getSkillId(cluster.title)}`}
-                tabIndex={0}
               >
-                <ul className="skill-row">
-                  {cluster.skills.map((skill) => {
-                    const SkillIcon = skill.icon;
-                    return (
-                      <li className="skill-pill" key={skill.label}>
-                        <SkillIcon className="skill-pill-icon" aria-hidden="true" />
-                        <span>{skill.label}</span>
-                      </li>
-                    );
-                  })}
+                <ul className="core-skill-list">
+                  {category.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
                 </ul>
               </article>
             ))}
+        </div>
+
+        {/* Technical Skills Section - existing interactive clusters */}
+        <div className="technical-skills-section" style={{ marginTop: '3rem' }}>
+          <h3 className="section-subtitle">Technical Skills</h3>
+          <div className="skill-clusters">
+            <div className="skill-filter" role="tablist" aria-label="Skill categories">
+              {skillClusters.map((cluster) => (
+                <button
+                  key={cluster.title}
+                  type="button"
+                  id={`skill-tab-${getSkillId(cluster.title)}`}
+                  role="tab"
+                  aria-controls={`skill-panel-${getSkillId(cluster.title)}`}
+                  aria-selected={activeSkillCluster === cluster.title}
+                  className={`skill-filter-btn ${activeSkillCluster === cluster.title ? "is-active" : ""}`}
+                  onClick={() => setActiveSkillCluster(cluster.title)}
+                >
+                  <cluster.icon className="skill-filter-icon" aria-hidden="true" />
+                  {cluster.title}
+                </button>
+              ))}
+            </div>
+
+            {skillClusters
+              .filter((cluster) => cluster.title === activeSkillCluster)
+              .map((cluster) => (
+                <article
+                  className="skill-cluster"
+                  key={cluster.title}
+                  id={`skill-panel-${getSkillId(cluster.title)}`}
+                  role="tabpanel"
+                  aria-labelledby={`skill-tab-${getSkillId(cluster.title)}`}
+                  tabIndex={0}
+                >
+                  <ul className="skill-row">
+                    {cluster.skills.map((skill) => {
+                      const SkillIcon = skill.icon;
+                      return (
+                        <li className="skill-pill" key={skill.label}>
+                          <SkillIcon className="skill-pill-icon" aria-hidden="true" />
+                          <span>{skill.label}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </article>
+              ))}
+          </div>
         </div>
       </section>
 

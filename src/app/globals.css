@@ -1097,6 +1097,58 @@ button:focus-visible {
   letter-spacing: 0.1em;
 }
 
+/* ============================================
+   Core Skills Section - Interactive Tabbed Layout
+   ============================================ */
+
+.core-skills-section {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--type-subhead);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.core-skill-panel {
+  margin-top: 2rem;
+}
+
+.core-skill-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.core-skill-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.core-skill-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Technical Skills Section separator */
+.technical-skills-section {
+  margin-top: clamp(40px, 6vw, 56px);
+  padding-top: clamp(32px, 5vw, 44px);
+  border-top: 1px solid var(--line);
+}
+
 .skill-clusters {
   display: grid;
   gap: 12px;
@@ -1925,6 +1977,25 @@ button:focus-visible {
     gap: 2px;
   }
 
+  /* Core Skills Mobile Adjustments */
+  .core-skill-panel {
+    margin-top: 1.5rem;
+  }
+
+  .core-skill-list {
+    gap: 0.65rem;
+  }
+
+  .core-skill-list li {
+    font-size: 0.92rem;
+    padding-left: 1.3rem;
+  }
+
+  .technical-skills-section {
+    margin-top: 32px;
+    padding-top: 28px;
+  }
+
   /* CV Preview Mobile Styles */
   .cv-preview-header {
     padding: 16px 0;
@@ -2409,6 +2480,76 @@ button:focus-visible {
   .cv-two-col > article {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  /* Core Skills Section - Print Styles */
+  .core-skills-section {
+    page-break-inside: avoid;
+    margin-bottom: 16pt;
+  }
+
+  .section-subtitle {
+    font-size: 11pt;
+    font-weight: 600;
+    color: #1a1a1a !important;
+    margin: 0 0 10pt;
+    page-break-after: avoid;
+  }
+
+  /* Hide tab buttons in print, show all content */
+  .skill-filter {
+    display: none !important;
+  }
+
+  .core-skill-panel {
+    margin-top: 0 !important;
+    display: block !important;
+    page-break-inside: avoid;
+  }
+
+  /* Show all panels in print (override filter) */
+  .core-skills-section .core-skill-panel {
+    display: block !important;
+    margin-bottom: 12pt;
+    padding: 12pt;
+    background: #f8f8f8 !important;
+    border: 1pt solid #ddd !important;
+    border-radius: 4pt;
+  }
+
+  .core-skill-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+  }
+
+  .core-skill-list li {
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: #333 !important;
+    padding-left: 14pt;
+    margin-bottom: 4pt;
+    position: relative;
+    page-break-inside: avoid;
+  }
+
+  .core-skill-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .core-skill-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #8e4618 !important;
+    font-weight: 700;
+  }
+
+  .technical-skills-section {
+    margin-top: 16pt;
+    padding-top: 14pt;
+    border-top: 1pt solid #ddd;
   }
 
   /* Page Break Control */
