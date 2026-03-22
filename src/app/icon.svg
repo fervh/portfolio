@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="F">
-  <rect width="256" height="256" rx="48" fill="#ffffff" />
-  <path d="M88 56h96v24h-68v34h56v24h-56v62H88V56z" fill="#f1693c" />
+  <rect width="256" height="256" rx="48" fill="#1a1a1a" />
+  <path d="M88 56h96v24h-68v34h56v24h-56v62H88V56z" fill="#2a9c75" />
 </svg>
