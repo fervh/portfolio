@@ -47,8 +47,7 @@ import SectionAccentLine from "@/components/SectionAccentLine";
 import SectionHeadingHighlight from "@/components/SectionHeadingHighlight";
 
 const metrics = [
-  { label: "Años de experiencia", value: "5+" },
-  { label: "Programas de autonomía", value: "20+" },
+  { label: "Years of experience", value: "5+" },
   { label: "Regions worked", value: "Spain · Germany" },
 ];
 
@@ -745,9 +744,9 @@ export default function HomeContent() {
               <Github className="icon" aria-hidden="true" />
               GitHub
             </a>
-            <a href="https://maps.google.com/?q=Madrid,Spain" target="_blank" rel="noreferrer">
+            <a href="https://maps.google.com/?q=Hamburg,Germany" target="_blank" rel="noreferrer">
               <MapPin className="icon" aria-hidden="true" />
-              Madrid, Spain
+              Hamburg, Germany
             </a>
           </div>
         </div>
