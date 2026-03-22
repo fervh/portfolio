@@ -1,8 +1,9 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import type { IconType } from "react-icons";
 import {
   FaCarSide,
@@ -40,49 +41,53 @@ import {
   SiUnity,
 } from "react-icons/si";
 import { TbCircuitBattery, TbCircuitChangeover, TbMathIntegralX } from "react-icons/tb";
+import SectionAccentLine from "@/components/SectionAccentLine";
+import SectionHeadingHighlight from "@/components/SectionHeadingHighlight";
+import SoftGlowOrb from "@/components/SoftGlowOrb";
+
+const metrics = [
+  { label: "Years building robotics systems", value: "5+" },
+  { label: "Autonomy and perception programs", value: "20+" },
+  { label: "Regions worked", value: "ES / DE" },
+];
 
 const experience = [
   {
     role: "Senior Software Engineer",
     company: "Beagle Systems",
-    dates: "Sep 2025 — Present",
+    dates: "Sep 2025 - Present",
     location: "Hamburg, Germany",
-    summary: "Design and optimization of flight control and embedded software for long-range UAV operations.",
+    summary:
+      "Design and optimization of flight control and embedded software for long-range UAV operations.",
     highlights: [
-      "Develop flight control stacks and firmware drivers for STM32 and ARM-based platforms.",
-      "Implement real-time capabilities with FreeRTOS and NuttX for fixed-wing and VTOL systems.",
-      "Integrate and debug USB, SPI, I2C, CAN, and SDIO interfaces for mission reliability.",
+      "Developed flight control stacks and firmware drivers for STM32 and ARM platforms.",
+      "Implemented real-time capabilities with FreeRTOS and NuttX for fixed-wing and VTOL systems.",
+      "Integrated USB, SPI, I2C, CAN, and SDIO interfaces to improve mission reliability.",
     ],
   },
   {
     role: "Research Technician - Autonomous Vehicles",
     company: "Autonomous Mobility and Perception Lab (AMPL)",
-    dates: "Aug 2023 — Jul 2025",
+    dates: "Aug 2023 - Jul 2025",
     location: "Madrid, Spain",
-    summary: "R&D for intelligent mobility systems, combining real-time perception, communication, and validation.",
+    summary:
+      "R&D for intelligent mobility systems, combining real-time perception, communication, and validation.",
     highlights: [
       "Built ROS/ROS2 sensor drivers in C++ and Python for IMU, LiDAR, and camera pipelines.",
-      "Developed ECU-level communication over CAN bus and low-level real-time controls.",
+      "Developed ECU-level communication over CAN bus and low-level real-time control modules.",
       "Delivered streaming and monitoring systems with UDP/TCP/WebRTC/SRT and Grafana dashboards.",
     ],
   },
   {
     role: "Technical Bids Intern",
     company: "Serveo",
-    dates: "Sep 2022 — Mar 2023",
+    dates: "Sep 2022 - Mar 2023",
     location: "Madrid, Spain",
-    summary: "Supported technology tenders and technical proposals for smart city and digitalization programs.",
+    summary:
+      "Supported technology tenders and technical proposals for smart city and digitalization programs.",
     highlights: [
-      "Contributed to technical documentation and coordinated partner solutions in IoT and AI/ML.",
+      "Contributed to technical documentation and partner coordination in IoT and AI/ML initiatives.",
     ],
-  },
-  {
-    role: "STEM Instructor",
-    company: "The Creative Minds Education",
-    dates: "Dec 2020 — Jul 2022",
-    location: "Madrid, Spain",
-    summary: "Delivered robotics, programming, and 3D design training for student cohorts.",
-    highlights: ["Designed practical, project-based sessions focused on automation and electronics."],
   },
 ];
 
@@ -90,13 +95,14 @@ const education = [
   {
     program: "Master's Degree in Robotics and Automation",
     school: "Carlos III University of Madrid (UC3M)",
-    dates: "2023 — 2025",
-    summary: "Master thesis: Vehicle Immersion System / Immersive VR platform for real-time interaction (10/10).",
+    dates: "2023 - 2025",
+    summary:
+      "Master thesis: Vehicle Immersion System / immersive VR platform for real-time interaction (10/10).",
   },
   {
-    program: "B.Sc. Industrial Electronics and Automation Engineering",
-    school: "Carlos III University of Madrid (UC3M) - Bilingual",
-    dates: "2019 — 2023",
+    program: "B.Sc. Industrial Electronics and Automation Engineering (Bilingual)",
+    school: "Carlos III University of Madrid (UC3M)",
+    dates: "2019 - 2023",
     summary: "Final degree thesis: Miniature Autonomous Vehicle.",
   },
 ];
@@ -106,6 +112,7 @@ const projects = [
     title: "Drone Design and Construction",
     summary:
       "Built FPV and autonomous drones using custom electronics, 3D-printed frames, and iterative control tuning.",
+    impact: "Reliable flight behavior under real-world field conditions.",
     tags: ["PX4", "Embedded", "Control", "3D Printing"],
     image:
       "https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1400&q=80",
@@ -114,37 +121,19 @@ const projects = [
     title: "VR Development for Robotics Control",
     summary:
       "Developed Unity and ROS interfaces for immersive teleoperation and real-time robotics interaction experiments.",
+    impact: "Reduced iteration time in operator training and HMI validation.",
     tags: ["Unity", "ROS", "C#", "Realtime"],
     image:
       "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Design & Additive Manufacturing",
+    title: "Design and Additive Manufacturing",
     summary:
-      "FDM workflow optimization, slicer tuning, and functional prototyping across PLA, PETG, ABS, TPU, and nylon-based materials.",
-    tags: ["Recycling", "Filament Extrusion", "CAD", "3D Printing"],
+      "FDM workflow optimization, slicer tuning, and functional prototyping across engineering-grade materials.",
+    impact: "Faster prototyping cycles with more robust mechanical iterations.",
+    tags: ["CAD", "FDM", "Materials", "Rapid Prototyping"],
     image:
       "https://images.unsplash.com/photo-1741848137437-56fb14b7ba87?auto=format&fit=crop&w=1600&h=900&q=80",
-  },
-];
-
-const certifications = [
-  { name: "EASA Drone Pilot A1/A3" },
-  { name: "EASA Drone Pilot A2" },
-  { name: "EASA Drone Pilot STS" },
-  { name: "UAS Operator" },
-  { name: "Radio Operator" },
-  { name: "MATLAB Certified" },
-  { name: "Scientific Computing with Python" },
-  { name: "Construction 4.0" },
-  { name: "Mobile App Development" },
-  { name: "Web Development" },
-  { name: "Driver's License (Class B)" },
-  {
-    name: "Generative AI on GCP: Building Generative AI-powered Apps",
-  },
-  {
-    name: "Generative AI on AWS: Creating Intelligent Chatbots",
   },
 ];
 
@@ -161,7 +150,7 @@ type SkillCluster = {
 
 const skillClusters: SkillCluster[] = [
   {
-    title: "Languages and Frameworks",
+    title: "Software and AI",
     icon: FaCode,
     skills: [
       { label: "Python", icon: SiPython },
@@ -173,14 +162,13 @@ const skillClusters: SkillCluster[] = [
       { label: "MATLAB", icon: TbMathIntegralX },
       { label: "Simulink", icon: TbCircuitBattery },
       { label: "C#", icon: SiSharp },
-      { label: "Unity", icon: SiUnity },
       { label: "JavaScript", icon: FaJs },
-      { label: "Backend", icon: FaServer },
-      { label: "Frontend", icon: MdWeb },
+      { label: "Backend APIs", icon: FaServer },
+      { label: "Web interfaces", icon: MdWeb },
     ],
   },
   {
-    title: "Robotics and Hardware",
+    title: "Robotics and Embedded",
     icon: FaMicrochip,
     skills: [
       { label: "CAN Bus", icon: FaCarSide },
@@ -192,13 +180,13 @@ const skillClusters: SkillCluster[] = [
       { label: "STM32", icon: FaMicrochip },
       { label: "Raspberry Pi", icon: SiRaspberrypi },
       { label: "Low-level Control", icon: FaTools },
-      { label: "I2C/SPI", icon: FaNetworkWired },
+      { label: "I2C/SPI/UART", icon: FaNetworkWired },
       { label: "PX4", icon: FaRobot },
       { label: "Real-time Protocols", icon: IoMdWifi },
     ],
   },
   {
-    title: "Tools and Simulation",
+    title: "Tooling and Delivery",
     icon: FaCogs,
     skills: [
       { label: "Docker", icon: SiDocker },
@@ -209,18 +197,80 @@ const skillClusters: SkillCluster[] = [
       { label: "Solid Edge", icon: SiSiemens },
       { label: "Blender", icon: SiBlender },
       { label: "LabVIEW", icon: ImLab },
-      { label: "RobotStudio", icon: FaRobot },
-      { label: "Gazebo", icon: FaRobot },
-      { label: "Webots", icon: FaRobot },
-      { label: "n8n", icon: SiN8N },
+      { label: "Unity", icon: SiUnity },
+      { label: "Gazebo/Webots", icon: FaRobot },
+      { label: "n8n automation", icon: SiN8N },
+      { label: "System debugging", icon: FaTools },
     ],
   },
 ];
 
-const languages = ["Spanish - Native", "English - C1", "German - A2"];
+const addedStrengths = [
+  "Technical leadership in multidisciplinary teams",
+  "System architecture from prototype to production",
+  "Clear technical documentation and stakeholder communication",
+  "Experiment design, validation, and iterative optimization",
+];
+
+const achievements = [
+  {
+    title: "Master Thesis: Vehicle Immersion System",
+    year: "2025",
+    detail:
+      "Immersive VR interaction platform for autonomous and teleoperated vehicle workflows.",
+  },
+  {
+    title: "Final Degree Thesis: Miniature Autonomous Vehicle",
+    year: "2023",
+    detail:
+      "End-to-end design and implementation of a working miniature autonomous mobility system.",
+  },
+  {
+    title: "1st Place - ASTI Robotics Competition",
+    year: "2019",
+    detail:
+      "Awarded for robotics innovation, implementation quality, and technical execution.",
+  },
+  {
+    title: "Young Researchers Finalist (Complutense)",
+    year: "-",
+    detail:
+      "Recognized for technical research contribution and experimental rigor.",
+  },
+];
+
+const capabilitySignals = [
+  { area: "LiDAR and Camera Detection", value: 92 },
+  { area: "Sensor Calibration and Synchronization", value: 90 },
+  { area: "ROS2 and Real-time Integration", value: 93 },
+  { area: "CAN/FlexRay and Low-level Comms", value: 88 },
+  { area: "System Validation and Observability", value: 89 },
+  { area: "Technical Leadership and Execution", value: 86 },
+];
+
+const languages = ["Spanish (native)", "English (C1)", "German (A2)"];
 
 export default function HomeContent() {
   const [activeSkillCluster, setActiveSkillCluster] = useState(skillClusters[0].title);
+  const getSkillId = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+  // Handle hash navigation on page load
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the hash from URL to prevent instant jump
+      const hashValue = hash.substring(1);
+      window.history.replaceState(null, '', window.location.pathname);
+      
+      // Wait for page to render, then smooth scroll
+      setTimeout(() => {
+        const target = document.getElementById(hashValue);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    }
+  }, []);
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll(".scroll-reveal"));
@@ -230,39 +280,22 @@ export default function HomeContent() {
       return undefined;
     }
 
-    const revealIfVisible = (element: Element) => {
-      const bounds = element.getBoundingClientRect();
-      if (bounds.top < window.innerHeight * 0.85) {
-        setTimeout(() => {
-          element.classList.add("in-view");
-        }, 60);
-        return true;
-      }
-      return false;
-    };
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("in-view");
-            }, 60);
+            entry.target.classList.add("in-view");
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.02,
-        rootMargin: "0px 0px 160px 0px",
+        threshold: 0.08,
+        rootMargin: "0px 0px 120px 0px",
       }
     );
 
-    elements.forEach((element) => {
-      if (!revealIfVisible(element)) {
-        observer.observe(element);
-      }
-    });
+    elements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
   }, []);
@@ -273,23 +306,31 @@ export default function HomeContent() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Portfolio</p>
-            <h1>Robotics Engineer · Autonomy and Embedded Systems</h1>
+            <h1>Senior Software Engineer - R&D Robotic Engineer</h1>
             <p className="lead">
-              Robotics engineer connecting research and production with real-time
-              software for UAVs and intelligent vehicles.
+              I bridge research and product delivery through embedded software, LiDAR/camera
+              detection pipelines, and control systems for UAVs and intelligent vehicles.
             </p>
+            <div className="hero-actions">
+              <a href="#contact" className="cta-button">
+                Hire me for autonomy systems
+                <ArrowRight className="icon" aria-hidden="true" />
+              </a>
+              <Link href="/cv" className="cta-button is-ghost">
+                Open CV
+              </Link>
+            </div>
             <div className="chip-row">
               <span className="chip">Flight Control</span>
               <span className="chip">ROS2</span>
-              <span className="chip">Perception</span>
+              <span className="chip">LiDAR Detection</span>
+              <span className="chip">Camera Perception</span>
               <span className="chip">Embedded RTOS</span>
             </div>
-            <div className="hero-availability">
-              <span className="dot" />
-              <p>Open to international relocation and autonomous systems roles.</p>
-            </div>
           </div>
+
           <div className="hero-visual">
+            <SoftGlowOrb />
             <div className="hero-image-frame">
               <a
                 className="hero-mini-linkedin"
@@ -303,14 +344,12 @@ export default function HomeContent() {
               <div className="hero-image" role="img" aria-label="Autonomous robotics environment" />
             </div>
             <div className="hero-meta">
-              <div>
-                <p className="hero-meta-label">Current</p>
-                <p className="hero-meta-value">Senior Software Engineer · Beagle Systems</p>
-              </div>
-              <div>
-                <p className="hero-meta-label">Base</p>
-                <p className="hero-meta-value">Hamburg / Madrid</p>
-              </div>
+              {metrics.map((metric) => (
+                <article key={metric.label} className="hero-kpi">
+                  <p className="hero-meta-label">{metric.label}</p>
+                  <p className="hero-meta-value">{metric.value}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
@@ -318,49 +357,55 @@ export default function HomeContent() {
 
       <section className="marquee scroll-reveal" data-delay="3" aria-label="Technical specialties">
         <div className="marquee-track">
-          <span>Flight Control · PX4 · NuttX · FreeRTOS · ROS2 · Sensor Fusion · SLAM · Perception · CAN Bus · UAV Systems · </span>
-          <span>Flight Control · PX4 · NuttX · FreeRTOS · ROS2 · Sensor Fusion · SLAM · Perception · CAN Bus · UAV Systems · </span>
+          <span>
+            Flight Control - PX4 - NuttX - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
+            Perception - CAN Bus - UAV Systems -
+          </span>
+          <span>
+            Flight Control - PX4 - NuttX - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
+            Perception - CAN Bus - UAV Systems -
+          </span>
         </div>
       </section>
 
       <section className="section-flow scroll-reveal" data-delay="4">
         <div className="section-header">
-          <h2>Profile</h2>
+          <SectionHeadingHighlight title="Profile" highlight="Profile" />
           <span className="section-tag">01</span>
         </div>
+        <SectionAccentLine />
         <p className="about-lead">
-          Robotics engineer with experience in autonomous systems R&D, specializing in
-          hardware-software integration for real-world autonomous vehicles.
+          Robotics engineer specialized in autonomy stack integration and lead-level
+          technical ownership for systems that
+          must perform outside the lab.
         </p>
         <p>
-          Focused on ROS/ROS2 integration, low-level communication, sensor calibration,
-          and real-time perception pipelines that move from lab validation into
-          production-ready applications.
+          I focus on LiDAR/camera perception pipelines, low-level communications,
+          and real-time control loops that turn prototypes into production-ready systems.
         </p>
       </section>
 
       <section id="experience" className="section-flow scroll-reveal" data-delay="5">
         <div className="section-header">
-          <h2>Experience</h2>
+          <SectionHeadingHighlight title="Experience" highlight="Experience" />
           <span className="section-tag">02</span>
         </div>
+        <SectionAccentLine />
         <div className="timeline timeline-lean">
           {experience.map((item) => (
             <article className="timeline-item" key={`${item.company}-${item.role}`}>
               <div>
                 <h3>{item.role}</h3>
                 <p className="muted">
-                  {item.company} · {item.dates} · {item.location}
+                  {item.company} - {item.dates} - {item.location}
                 </p>
               </div>
               <p>{item.summary}</p>
-              {item.highlights && item.highlights.length > 0 ? (
-                <ul className="timeline-points">
-                  {item.highlights.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
-              ) : null}
+              <ul className="timeline-points">
+                {item.highlights.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -368,12 +413,13 @@ export default function HomeContent() {
 
       <section id="projects" className="section-flow scroll-reveal" data-delay="6">
         <div className="section-header">
-          <h2>Projects</h2>
+          <SectionHeadingHighlight title="Selected Projects" highlight="Projects" />
           <span className="section-tag">03</span>
         </div>
+        <SectionAccentLine />
         <div className="project-gallery">
-          {projects.map((project) => (
-            <article className="project-tile" key={project.title}>
+          {projects.map((project, index) => (
+            <article className={`project-tile ${index === 0 ? "project-featured" : ""}`} key={project.title}>
               <div
                 className="project-media"
                 style={{ "--project-image": `url(${project.image})` } as CSSProperties}
@@ -383,6 +429,7 @@ export default function HomeContent() {
               <div className="project-body">
                 <h3>{project.title}</h3>
                 <p>{project.summary}</p>
+                <p className="project-impact">Impact: {project.impact}</p>
                 <div className="project-tags">
                   {project.tags.map((tag) => (
                     <span className="pill" key={tag}>
@@ -398,16 +445,19 @@ export default function HomeContent() {
 
       <section id="skills" className="section-flow scroll-reveal" data-delay="7">
         <div className="section-header">
-          <h2>Skills</h2>
+          <SectionHeadingHighlight title="Technical Skills" highlight="Skills" />
           <span className="section-tag">04</span>
         </div>
+        <SectionAccentLine />
         <div className="skill-clusters">
           <div className="skill-filter" role="tablist" aria-label="Skill categories">
             {skillClusters.map((cluster) => (
               <button
                 key={cluster.title}
                 type="button"
+                id={`skill-tab-${getSkillId(cluster.title)}`}
                 role="tab"
+                aria-controls={`skill-panel-${getSkillId(cluster.title)}`}
                 aria-selected={activeSkillCluster === cluster.title}
                 className={`skill-filter-btn ${activeSkillCluster === cluster.title ? "is-active" : ""}`}
                 onClick={() => setActiveSkillCluster(cluster.title)}
@@ -417,10 +467,18 @@ export default function HomeContent() {
               </button>
             ))}
           </div>
+
           {skillClusters
             .filter((cluster) => cluster.title === activeSkillCluster)
             .map((cluster) => (
-              <article className="skill-cluster" key={cluster.title} role="tabpanel">
+              <article
+                className="skill-cluster"
+                key={cluster.title}
+                id={`skill-panel-${getSkillId(cluster.title)}`}
+                role="tabpanel"
+                aria-labelledby={`skill-tab-${getSkillId(cluster.title)}`}
+                tabIndex={0}
+              >
                 <ul className="skill-row">
                   {cluster.skills.map((skill) => {
                     const SkillIcon = skill.icon;
@@ -437,18 +495,69 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="education" className="section-flow scroll-reveal" data-delay="8">
+      <section className="section-flow scroll-reveal" data-delay="8" id="achievements">
         <div className="section-header">
-          <h2>Education</h2>
+          <SectionHeadingHighlight title="Achievements" highlight="Achievements" />
           <span className="section-tag">05</span>
         </div>
+        <SectionAccentLine />
+        <div className="achievement-flow">
+          {achievements.map((item) => (
+            <article key={item.title} className="achievement-row">
+              <p className="achievement-year">{item.year}</p>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-flow scroll-reveal" data-delay="9">
+        <div className="section-header">
+          <SectionHeadingHighlight title="Additional Strengths" highlight="Strengths" />
+          <span className="section-tag">06</span>
+        </div>
+        <SectionAccentLine />
+        <ul className="cert-grid">
+          {addedStrengths.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="section-flow scroll-reveal" data-delay="10">
+        <div className="section-header">
+          <SectionHeadingHighlight title="Capability Signals" highlight="Signals" />
+          <span className="section-tag">07</span>
+        </div>
+        <SectionAccentLine />
+        <div className="signal-list" aria-label="Capability level indicators">
+          {capabilitySignals.map((signal) => (
+            <article className="signal-item" key={signal.area}>
+              <p className="signal-label">{signal.area}</p>
+              <div className="signal-track" role="meter" aria-valuenow={signal.value} aria-valuemin={0} aria-valuemax={100}>
+                <span className="signal-fill" style={{ width: `${signal.value}%` }} />
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="education" className="section-flow scroll-reveal" data-delay="11">
+        <div className="section-header">
+          <SectionHeadingHighlight title="Education" highlight="Education" />
+          <span className="section-tag">08</span>
+        </div>
+        <SectionAccentLine />
         <div className="timeline timeline-lean">
           {education.map((item) => (
             <article className="timeline-item" key={item.program}>
               <div>
                 <h3>{item.program}</h3>
                 <p className="muted">
-                  {item.school} · {item.dates}
+                  {item.school} - {item.dates}
                 </p>
               </div>
               <p>{item.summary}</p>
@@ -457,23 +566,12 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="9">
+      <section className="section-flow scroll-reveal" data-delay="12">
         <div className="section-header">
-          <h2>Certifications</h2>
-          <span className="section-tag">06</span>
+          <SectionHeadingHighlight title="Languages" highlight="Languages" />
+          <span className="section-tag">09</span>
         </div>
-        <ul className="cert-grid">
-          {certifications.map((item) => (
-            <li key={item.name}>{item.name}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="section-flow scroll-reveal" data-delay="10">
-        <div className="section-header">
-          <h2>Languages</h2>
-          <span className="section-tag">07</span>
-        </div>
+        <SectionAccentLine />
         <div className="language-row">
           {languages.map((language) => (
             <span key={language}>{language}</span>
@@ -481,26 +579,26 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="contact" className="section-flow scroll-reveal" data-delay="11">
+      <section id="contact" className="section-flow scroll-reveal" data-delay="13">
         <div className="section-header">
-          <h2>Contact</h2>
-          <span className="section-tag">08</span>
+          <SectionHeadingHighlight title="Contact" highlight="Contact" />
+          <span className="section-tag">10</span>
         </div>
+        <SectionAccentLine />
         <div className="contact-grid">
           <div>
             <p className="contact-cta">Let&apos;s collaborate on autonomy and robotics systems.</p>
-            <p className="muted">Available for international opportunities in advanced robotics.</p>
+            <p className="muted">
+              Available for international opportunities in advanced robotics and
+              intelligent mobility.
+            </p>
           </div>
           <div className="contact-links">
             <a href="mailto:contact@velahidalgo.com">
               <Mail className="icon" aria-hidden="true" />
               contact@velahidalgo.com
             </a>
-            <a
-              href="https://www.linkedin.com/in/fernandovelahidalgo/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/fernandovelahidalgo/" target="_blank" rel="noreferrer">
               <Linkedin className="icon" aria-hidden="true" />
               LinkedIn
             </a>

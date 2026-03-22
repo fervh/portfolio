@@ -3,24 +3,12 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { Award, Briefcase, FileUser, FolderKanban, Mail, Moon, Sun, User, Wrench } from "lucide-react";
+import { FileUser, Moon, Sun, User } from "lucide-react";
 
-const navLinks = [
-  { href: "#about", label: "About", Icon: User },
-  { href: "#experience", label: "Experience", Icon: Briefcase },
-  { href: "#projects", label: "Projects", Icon: FolderKanban },
-  { href: "#skills", label: "Skills", Icon: Wrench },
-  { href: "#achievements", label: "Achievements", Icon: Award },
-  { href: "#contact", label: "Contact", Icon: Mail },
-];
-
-export default function TopBar() {
+export default function CVTopBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
-  const router = useRouter();
   const isClient = useSyncExternalStore(
     () => () => undefined,
     () => true,
@@ -78,48 +66,12 @@ export default function TopBar() {
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 8);
-      
-      // Detect active section - always select the closest one
-      const sections = navLinks.map(link => link.href.replace('#', ''));
-      let closestSection = "";
-      let closestDistance = Infinity;
-      
-      const viewportCenter = window.innerHeight / 2;
-      
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const elementCenter = rect.top + rect.height / 2;
-          const distance = Math.abs(elementCenter - viewportCenter);
-          
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestSection = `#${sectionId}`;
-          }
-        }
-      }
-      
-      if (closestSection) {
-        setActiveSection(closestSection);
-      }
     };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // For same-page navigation, use smooth scroll
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(href);
-    }
-  };
 
   useEffect(() => {
     if (!menuOpen) {
@@ -140,25 +92,18 @@ export default function TopBar() {
   }, [menuOpen]);
 
   return (
-    <div className={`top-bar ${isScrolled ? "is-scrolled" : ""}`}>
+    <div className={`top-bar cv-page-header ${isScrolled ? "is-scrolled" : ""}`}>
       <div className="brand-mark">
         <span className="brand-dot" />
-        <a href="#about" onClick={(e) => handleNavClick(e, '#about')} aria-label="Go to About section">
+        <Link href="/" aria-label="Go to home">
           Fernando Vela Hidalgo
-        </a>
+        </Link>
       </div>
       <nav className="top-links" aria-label="Primary navigation">
-        {navLinks.map(({ href, label, Icon }) => (
-          <a 
-            key={href} 
-            href={href} 
-            onClick={(e) => handleNavClick(e, href)}
-            className={activeSection === href ? 'active' : ''}
-          >
-            <Icon className="icon" aria-hidden="true" />
-            {label}
-          </a>
-        ))}
+        <Link href="/" className="nav-home-link">
+          <User className="icon" aria-hidden="true" />
+          Portfolio
+        </Link>
         <Link href="/cv" className="nav-cv-link">
           <FileUser className="icon" aria-hidden="true" />
           CV
@@ -228,22 +173,15 @@ export default function TopBar() {
                 )}
                 <span>{theme === "dark" ? "Light mode" : "Dark mode"}</span>
               </button>
-              {navLinks.map(({ href, label, Icon }) => (
-                <a
-                  key={href}
-                  href={href}
-                  role="menuitem"
-                  onClick={(e) => {
-                    handleNavClick(e, href);
-                    setMenuOpen(false);
-                  }}
-                  className={activeSection === href ? 'active' : ''}
-                >
-                  <Icon className="icon" aria-hidden="true" />
-                  {label}
-                </a>
-              ))}
-              <Link href="/cv" role="menuitem" className="nav-cv-link" onClick={() => setMenuOpen(false)}>
+              <Link 
+                href="/" 
+                role="menuitem" 
+                onClick={() => setMenuOpen(false)}
+              >
+                <User className="icon" aria-hidden="true" />
+                Portfolio
+              </Link>
+              <Link href="/cv" role="menuitem" onClick={() => setMenuOpen(false)}>
                 <FileUser className="icon" aria-hidden="true" />
                 CV
               </Link>
