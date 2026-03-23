@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore, useRef } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { FileUser, Moon, Sun, User } from "lucide-react";
@@ -9,11 +9,26 @@ export default function CVTopBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [isScrolled, setIsScrolled] = useState(false);
+  const topBarRef = useRef<HTMLElement>(null);
   const isClient = useSyncExternalStore(
     () => () => undefined,
     () => true,
     () => false
   );
+
+  // Update CSS variable with actual top bar height
+  useEffect(() => {
+    const updateTopBarHeight = () => {
+      if (topBarRef.current) {
+        const height = topBarRef.current.offsetHeight;
+        document.documentElement.style.setProperty('--top-bar-height', `${height}px`);
+      }
+    };
+
+    updateTopBarHeight();
+    window.addEventListener('resize', updateTopBarHeight);
+    return () => window.removeEventListener('resize', updateTopBarHeight);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -92,7 +107,7 @@ export default function CVTopBar() {
   }, [menuOpen]);
 
   return (
-    <div className={`top-bar cv-page-header ${isScrolled ? "is-scrolled" : ""}`}>
+    <header ref={topBarRef} className={`top-bar cv-page-header ${isScrolled ? "is-scrolled" : ""}`}>
       <div className="brand-mark">
         <span className="brand-dot" />
         <Link href="/" aria-label="Go to home">
@@ -189,6 +204,6 @@ export default function CVTopBar() {
             document.body
           )}
       </div>
-    </div>
+    </header>
   );
 }

@@ -336,8 +336,14 @@ export default function HomeContent() {
       // Wait for page to render, then smooth scroll
       setTimeout(() => {
         const target = document.getElementById(hashValue);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const topBar = document.querySelector('.top-bar') as HTMLElement;
+        if (target && topBar) {
+          const topBarHeight = topBar.offsetHeight;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - topBarHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
         }
       }, 300);
     }

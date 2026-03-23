@@ -109,12 +109,27 @@ export default function TopBar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
+  const topBarRef = useRef<HTMLElement>(null);
   const router = useRouter();
   const isClient = useSyncExternalStore(
     () => () => undefined,
     () => true,
     () => false
   );
+
+  // Update CSS variable with actual top bar height
+  useEffect(() => {
+    const updateTopBarHeight = () => {
+      if (topBarRef.current) {
+        const height = topBarRef.current.offsetHeight;
+        document.documentElement.style.setProperty('--top-bar-height', `${height}px`);
+      }
+    };
+
+    updateTopBarHeight();
+    window.addEventListener('resize', updateTopBarHeight);
+    return () => window.removeEventListener('resize', updateTopBarHeight);
+  }, []);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -204,8 +219,13 @@ export default function TopBar() {
     e.currentTarget.blur(); // Remove focus immediately
     const targetId = href.replace('#', '');
     const target = document.getElementById(targetId);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+    if (target && topBarRef.current) {
+      const topBarHeight = topBarRef.current.offsetHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - topBarHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
       setActiveSection(href);
     }
   };
@@ -229,7 +249,7 @@ export default function TopBar() {
   }, [menuOpen]);
 
   return (
-    <div className={`top-bar ${isScrolled ? "is-scrolled" : ""}`}>
+    <header ref={topBarRef} className={`top-bar ${isScrolled ? "is-scrolled" : ""}`}>
       {/* Animated turbulence background layer */}
       <HeaderBackground />
       <div className="brand-mark">
@@ -342,6 +362,6 @@ export default function TopBar() {
             document.body
           )}
       </div>
-    </div>
+    </header>
   );
 }
