@@ -677,7 +677,7 @@ button:focus-visible {
 }
 
 .hero {
-  padding-top: 0;
+  padding-top: 50px;
 }
 
 .hero-grid {
@@ -911,6 +911,7 @@ button:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--muted);
+  will-change: transform;
   animation: marquee 20s linear infinite;
 }
 
@@ -1852,8 +1853,8 @@ button:focus-visible {
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes line-sweep {

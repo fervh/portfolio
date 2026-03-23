@@ -437,15 +437,20 @@ export default function HomeContent() {
         </div>
       </header>
 
-      <section className="marquee scroll-reveal" data-delay="3" aria-label="Technical specialties">
-        <div className="marquee-track">
+      <section className="marquee" aria-label="Technical specialties">
+        <div 
+          className="marquee-track" 
+          style={{ animation: 'marquee 20s linear infinite' }}
+        >
           <span>
-            Flight Control - PX4 - NuttX - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
-            Perception - CAN Bus - UAV Systems -
+            Flight Control - PX4 - Research - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
+            Perception - CAN Bus - UAV Systems - Autonomous Vehicles - LIDAR -
+            Camera - Development - AI - Automation - Real-time - Robotics -
           </span>
           <span>
-            Flight Control - PX4 - NuttX - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
-            Perception - CAN Bus - UAV Systems -
+            Flight Control - PX4 - Research - FreeRTOS - ROS2 - Sensor Fusion - SLAM -
+            Perception - CAN Bus - UAV Systems - Autonomous Vehicles - LIDAR -
+            Camera - Development - AI - Automation - Real-time - Robotics -
           </span>
         </div>
       </section>
