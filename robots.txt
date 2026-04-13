@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /background-demo
+Disallow: /test-pdf
+
+Sitemap: https://fernando.velahidalgo.com/sitemap.xml
