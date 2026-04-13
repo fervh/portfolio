@@ -70,16 +70,14 @@
   --shadow-soft: 0 20px 40px rgba(17, 19, 24, 0.08);
   --shadow-strong: 0 26px 56px rgba(17, 19, 24, 0.16);
   --top-bar-height: 82px; /* Initial fallback, updated dynamically by JS */
-  --motion-duration-page: 260ms;
   --motion-duration-reveal: 700ms;
   --motion-duration-hover: 220ms;
-  --motion-page-delay: 90ms;
+  --motion-page-delay: 120ms;
   --motion-delay-step: 82ms;
   --motion-ease-page: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
   --motion-ease-hover: cubic-bezier(0.22, 1, 0.36, 1);
   --motion-translate-lg: 12px;
-  --motion-translate-sm: 8px;
   --cursor-dot-size: 6px;
   --cursor-ring-size: 34px;
   --cursor-color: var(--accent);
@@ -211,6 +209,7 @@ html.cursor-pressed .cursor-ring {
   background: var(--page-bg);
   pointer-events: none;
   z-index: 0;
+  opacity: 1;
 }
 
 .page-background::before,
@@ -253,38 +252,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: clamp(28px, 4vw, 52px);
-  animation: page-unfold var(--motion-duration-page) var(--motion-ease-page) both;
-  animation-delay: var(--motion-page-delay);
 }
-
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(var(--motion-translate-lg));
-  will-change: opacity, transform;
-  transition:
-    opacity var(--motion-duration-reveal) var(--motion-ease-reveal),
-    transform var(--motion-duration-reveal) var(--motion-ease-reveal);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.scroll-reveal.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-reveal[data-delay="1"] { --reveal-delay: calc(var(--motion-delay-step) * 1); }
-.scroll-reveal[data-delay="2"] { --reveal-delay: calc(var(--motion-delay-step) * 2); }
-.scroll-reveal[data-delay="3"] { --reveal-delay: calc(var(--motion-delay-step) * 3); }
-.scroll-reveal[data-delay="4"] { --reveal-delay: calc(var(--motion-delay-step) * 4); }
-.scroll-reveal[data-delay="5"] { --reveal-delay: calc(var(--motion-delay-step) * 5); }
-.scroll-reveal[data-delay="6"] { --reveal-delay: calc(var(--motion-delay-step) * 6); }
-.scroll-reveal[data-delay="7"] { --reveal-delay: calc(var(--motion-delay-step) * 7); }
-.scroll-reveal[data-delay="8"] { --reveal-delay: calc(var(--motion-delay-step) * 8); }
-.scroll-reveal[data-delay="9"] { --reveal-delay: calc(var(--motion-delay-step) * 9); }
-.scroll-reveal[data-delay="10"] { --reveal-delay: calc(var(--motion-delay-step) * 10); }
-.scroll-reveal[data-delay="11"] { --reveal-delay: calc(var(--motion-delay-step) * 11); }
-.scroll-reveal[data-delay="12"] { --reveal-delay: calc(var(--motion-delay-step) * 12); }
-.scroll-reveal[data-delay="13"] { --reveal-delay: calc(var(--motion-delay-step) * 13); }
 
 h1,
 h2,
@@ -384,6 +352,9 @@ button:focus-visible {
     border-color 260ms var(--motion-ease-hover),
     backdrop-filter 260ms var(--motion-ease-hover);
   isolation: isolate; /* Create stacking context for layers */
+  opacity: 1;
+  transform: none;
+  will-change: opacity, transform;
 }
 
 /* Background layer - holds animated effect and gradient */
@@ -1847,7 +1818,7 @@ button:focus-visible {
   100% { transform: translate3d(-10px, 10px, 0) rotate(-1.5deg); }
 }
 
-@keyframes page-unfold {
+@keyframes page-fade {
   from { opacity: 0; }
   to { opacity: 1; }
 }
@@ -2124,12 +2095,30 @@ button:focus-visible {
     --motion-duration-reveal: 0s;
     --motion-duration-hover: 0s;
     --motion-page-delay: 0s;
+    --motion-delay-background: 0s;
+    --motion-delay-topbar: 0s;
+    --motion-delay-content: 0s;
   }
 
   .page,
+  .page > *,
+  .top-bar,
+  .page-background,
   .marquee-track,
   .page-background::after {
     animation: none;
+    transition: none;
+  }
+
+  .page > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .top-bar,
+  .page-background {
+    opacity: 1;
+    transform: none;
   }
 
   .custom-cursor {

@@ -3,6 +3,10 @@ import PDFTest from "@/components/PDFTest";
 
 export const metadata: Metadata = {
   title: "PDF Test",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function TestPage() {

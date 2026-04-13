@@ -349,34 +349,6 @@ export default function HomeContent() {
     }
   }, []);
 
-  useEffect(() => {
-    const elements = Array.from(document.querySelectorAll(".scroll-reveal"));
-
-    if (!("IntersectionObserver" in window)) {
-      elements.forEach((element) => element.classList.add("in-view"));
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.08,
-        rootMargin: "0px 0px 120px 0px",
-      }
-    );
-
-    elements.forEach((element) => observer.observe(element));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <>
       <EtherealShadow
@@ -386,7 +358,7 @@ export default function HomeContent() {
         noise={{ opacity: 0.8, scale: 1.2 }}
         sizing="fill"
       />
-      <header id="about" className="hero scroll-reveal" data-delay="2">
+      <header id="about" className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Portfolio</p>
@@ -418,7 +390,7 @@ export default function HomeContent() {
                 className="hero-mini-linkedin"
                 href="https://www.linkedin.com/in/fernandovelahidalgo/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="hero-mini-linkedin-icon" aria-hidden="true" />
@@ -455,7 +427,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="4">
+      <section className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Profile" highlight="Profile" />
           <span className="section-tag">01</span>
@@ -479,7 +451,7 @@ export default function HomeContent() {
         </p>
       </section>
 
-      <section id="experience" className="section-flow scroll-reveal" data-delay="5">
+      <section id="experience" className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Experience" highlight="Experience" />
           <span className="section-tag">02</span>
@@ -510,7 +482,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="projects" className="section-flow scroll-reveal" data-delay="6">
+      <section id="projects" className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Self-Development Projects" highlight="Projects" />
           <span className="section-tag">03</span>
@@ -542,7 +514,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="skills" className="section-flow scroll-reveal" data-delay="7">
+      <section id="skills" className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Skills" highlight="Skills" />
           <span className="section-tag">04</span>
@@ -635,7 +607,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="8" id="achievements">
+      <section className="section-flow" id="achievements">
         <div className="section-header">
           <SectionHeadingHighlight title="Achievements" highlight="Achievements" />
           <span className="section-tag">05</span>
@@ -654,7 +626,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="9">
+      <section className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Additional Strengths" highlight="Strengths" />
           <span className="section-tag">06</span>
@@ -667,7 +639,7 @@ export default function HomeContent() {
         </ul>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="10">
+      <section className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Capability Signals" highlight="Signals" />
           <span className="section-tag">07</span>
@@ -685,7 +657,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="education" className="section-flow scroll-reveal" data-delay="11">
+      <section id="education" className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Education" highlight="Education" />
           <span className="section-tag">08</span>
@@ -715,7 +687,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section className="section-flow scroll-reveal" data-delay="12">
+      <section className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Languages" highlight="Languages" />
           <span className="section-tag">09</span>
@@ -728,7 +700,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      <section id="contact" className="section-flow scroll-reveal" data-delay="13">
+      <section id="contact" className="section-flow">
         <div className="section-header">
           <SectionHeadingHighlight title="Contact" highlight="Contact" />
           <span className="section-tag">10</span>
@@ -747,15 +719,15 @@ export default function HomeContent() {
               <Mail className="icon" aria-hidden="true" />
               contact@velahidalgo.com
             </a>
-            <a href="https://www.linkedin.com/in/fernandovelahidalgo/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/fernandovelahidalgo/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="icon" aria-hidden="true" />
               LinkedIn
             </a>
-            <a href="https://github.com/fervh" target="_blank" rel="noreferrer">
+            <a href="https://github.com/fervh" target="_blank" rel="noopener noreferrer">
               <Github className="icon" aria-hidden="true" />
               GitHub
             </a>
-            <a href="https://maps.google.com/?q=Hamburg,Germany" target="_blank" rel="noreferrer">
+            <a href="https://maps.google.com/?q=Hamburg,Germany" target="_blank" rel="noopener noreferrer">
               <MapPin className="icon" aria-hidden="true" />
               Hamburg, Germany
             </a>
