@@ -12,7 +12,7 @@ interface CVDownloadClientProps {
 
 export default function CVDownloadClient({ 
   data, 
-  fileName = "Fernando-Vela-Hidalgo-CV.pdf" 
+  fileName = "Fernando_Vela_Hidalgo_CV.pdf" 
 }: CVDownloadClientProps) {
   const portraitImage = usePortraitImage();
   const [components, setComponents] = useState<{

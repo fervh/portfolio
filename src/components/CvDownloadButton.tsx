@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 export default function CvDownloadButton() {
   const handleDownload = () => {
     const previousTitle = document.title;
-    document.title = "Fernando-Vela-Hidalgo-CV";
+    document.title = "Fernando_Vela_Hidalgo_CV";
     
     // Add slight delay to ensure title is set
     setTimeout(() => {
