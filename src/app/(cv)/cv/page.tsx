@@ -17,7 +17,7 @@ const cvData: CVData = {
   email: "contact@velahidalgo.com",
   linkedin: "linkedin.com/in/fernandovelahidalgo",
   github: "github.com/fervh",
-  website: "fernandovelahidalgo.com",
+  website: "fernando.velahidalgo.com",
   location: "Hamburg, Germany",
   
   summary: "Robotics engineer specialized in **autonomy stack integration** and lead-level technical ownership for production-grade autonomous systems. My work spans **embedded systems development** (STM32, ARM, FreeRTOS/NuttX), **flight control software** (PX4, ArduPilot), and **perception pipelines** integrating LiDAR, cameras, and multi-sensor fusion. I architect and implement **real-time software stacks** for autonomous UAVs and intelligent vehicles, bridging low-level firmware with high-level autonomy behaviors. I focus on production-ready reliability: system-level debugging, **hardware-software integration**, validation frameworks, and **safety-critical design**. My approach combines research rigor with engineering pragmatism, delivering deployable solutions for real-world autonomous operations across Europe.",
